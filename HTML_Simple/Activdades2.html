@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+Registro de usuario
+<form>
+<table border="4">
+	<tr>
+    	<td> Apellido</td>
+        <td> <input type="text" id="Apellido" name="Apellido" value="" /> </td>
+        
+    </tr>
+    <tr>
+    	<td> Nombre</td>
+        <td> <input type="text" id="nombre" name="nombre" value=""/>
+    </tr>
+	<tr>
+    	 <td> Género</td>
+         <td> <input type="radio" name="sexo" value="Hombre" />Hombre <br /> <input type="radio" name="sexo" value="Mujer" />Mujer
+    </tr>
+    <tr>
+    	<td> Ocupación</td>
+        <td>  
+        	  <select id ="ocupacion" name="ocupacion">
+              <option value="" selected="selected">- profesor - 		
+              </option> 
+              <option value="Enfermero">Enfermero</option>
+              </select>
+       </td>
+       
+    </tr>
+    	
+    <tr>
+     <td rowspan="2" > Comentarios</td>
+     <td> 
+
+	<label for="Comentario"></label> <br/> 
+	<textarea id="Comentario" name="Comentario" cols="40" rows=	
+    "5">Escribe tu comentario</textarea> </td>
+    </tr>
+    <tr>
+    	
+    </tr>
+    
+	<tr>
+    	<td colspan="2"> <input type="submit" name="Enviar" value="Enviar" /> </td>
+    </tr>
+    
+    
+</table>
+
+</form>
+</body>
+</html>
