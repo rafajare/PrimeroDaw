@@ -1,0 +1,9 @@
+
+public class Ejecucion {
+	public static void main (String args[]){
+
+	Instrumento g1= new GuitarraElectrica ("Guitarra",5);
+	g1.getTocar();
+
+	}
+}

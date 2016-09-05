@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+CD{display: block;}
+
+titulo{font-size:24px;
+       font-style:italic;
+	   color:#FF0000
+}
+canciones{ display: block;
+          font-size:24px;
+          color:red}
+cancion{display: block;}
+
+nombre{
+	display:block;
+	text-align:center;}
+
+cancion{color:blue}
+
+
+
+nombre-artista{font-size:24px;}
+
+datos-personales{display: block;}
+
+  
+  SUB_ELEMENT{display: block;
+              }
+  
+
+
+ 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<combates>
+  <personaje>
+    <nombre casa="Stark">Jon Snow</nombre>
+    <mata_a>Qhorin Mediamano</mata_a>
+  </personaje>
+  <personaje>
+    <nombre casa="Lannister">Tyrion</nombre>
+    <mata_a>Shae</mata_a>
+  </personaje>
+  <personaje>
+    <nombre casa="Baratheon">Stannis</nombre>
+    <mata_a>Robb Stark</mata_a>
+  </personaje>
+  <personaje>
+    <nombre casa="Lannister">Jaime</nombre>
+    <mata_a>Aerys el Rey Loco</mata_a>
+  </personaje>
+  <personaje>
+    <nombre casa="Greyjoy">Theon</nombre>
+    <mata_a>Ser Rodrik Cassel</mata_a>
+  </personaje>
+  <personaje>
+    <nombre casa="Stark">Arya</nombre>
+    <mata_a>Polliver</mata_a>
+  </personaje>
+</combates>

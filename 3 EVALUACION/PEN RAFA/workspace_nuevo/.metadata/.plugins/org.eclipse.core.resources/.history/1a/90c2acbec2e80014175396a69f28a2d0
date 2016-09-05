@@ -1,0 +1,22 @@
+import java.util.*;
+
+
+public class Publicacion extends Autor{
+	
+	private String titulo;
+	private int Anyo;
+	private int ISBN;
+	private ArrayList<String> autores;
+	
+	
+	
+	public Publicacion(String nombre_, int inicioContrato_, String DNI_,String titulo_,int Anyo_,int ISBN_,String autores) {
+		super(nombre_, inicioContrato_, DNI_);
+		
+		titulo=titulo_;
+		Anyo=Anyo_;
+		ISBN=ISBN_;	}
+		autores= new ArrayList<String>();
+	
+
+}

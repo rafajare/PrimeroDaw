@@ -1,0 +1,271 @@
+nano scrip.sh
+chmod +x script
+
+hacer else and if
+
+  GNU nano 2.2.6            Archivo: script.sh                                  
+
+read -p "Introduce dos valores" x y
+
+if [ $x -gt $y ];
+then
+ 
+        echo "x es mayor que y"
+else
+        if [ $x -eq $y ];
+then
+        echo "x e y son iguales"
+
+else  "y es mayor que x"
+
+  fi
+fi
+----------------------------------------------------------------
+
+read -p "Introduce un valor mayor que 0: " x 
+
+while [ $x -lt 0 ]; do 
+read -p "Introduce un valor mayor que 0: " x 
+done
+
+if [ $x -gt 0 ]; then
+
+        echo "El valor es correcto"
+        resto=$((x%2))
+
+if [ $resto -eq 0 ]; then
+
+        echo "El valor es par"
+        else
+        echo "El valor es impar"
+        fi
+        else echo "El valor no es correcto"
+        read -p "Introduce un valor mayor que 0" x
+
+fi 
+
+--------------------------------------------------------------------
+
+read -p "Introduce una nota: " x 
+while [ $x -le 0 -o $x -gt 10 ]; do
+read -p "Introduce una nota: " x 
+done
+
+if [ $x -lt 5 ]; then
+
+        echo "El alumno está suspendido"
+
+fi
+
+if [ $x -ge 5 ]  && [ $x -lt 6 ]; then
+
+        echo "El alumno tiene un SUFICIENTE"
+fi
+
+if [ $x -ge 6 ]  && [ $x -lt 7 ]; then
+
+echo "El alumno tiene un BIEN"
+fi
+
+if [ $x -ge 7 ]  && [ $x -lt 9 ]; then
+
+        echo "El alumno tiene un NOTABLE"
+fi
+
+------------------------------------------------------------------------
+                                 
+
+read -p "Introduce un valor: " x 
+while [ $x -le 0 ]; do
+read -p "El valor es incorrecto"
+read -p "Introduce un valor: " x 
+done
+
+for i in `seq 0 $x`; do
+
+        echo "$i"
+done 
+
+--------------------------------------------------------------------------
+
+read -p "Introduce un número " x
+suma=0
+contador=0
+while [ $x -gt 0 ]; do
+
+suma=$((suma+x))
+contador=$((contador +1))
+read -p "Introduce un número " x
+
+done
+
+echo "La suma vale $suma"
+media=`echo "scale=2; $suma/$contador" | bc`
+echo "EL valor medio es $media"
+
+
+---------------------------------------------------------------------------------------
+
+read -p "Introduce una cantidad de litros " x
+while [ $x -le 0 ]; do
+read -p "Introduce una cantidad de litros " x
+done
+
+precio=0
+
+if [ $x -le 50 ]; then 
+
+        precio=20
+
+        echo "El precio es $precio"     
+fi
+
+if [ $x -gt 50 ] && [ $x -le 200 ]; then
+
+        precio=$((20+(($x-50)*2)))
+
+echo "El precio es $precio"     
+fi
+
+if [ $x -gt 50 ] && [ $x -le 200 ]; then
+
+        precio=$((20+(($x-50)*2)))
+
+
+
+        echo "El precio es $precio"
+fi
+
+if [ $x -gt 200 ]; then
+
+        precio=$(((20+150*2)))
+        precio2=$((precio+(($x-200)*1)))
+        precioFinal=$((precio2))
+        echo "El precio es $precioFinal"
+
+fi
+
+-----------------------------------------------------------------------------------------------
+
+
+
+read -p "Introduce un valor del 1 al 30 : " dia
+
+resto=$((dia%7))
+
+if [ $resto -eq 0 ]; then echo "El resultado es domingo"; fi
+if [ $resto -eq 1 ]; then echo "El resultado es lunes"; fi
+if [ $resto -eq 2 ]; then echo "El resultado es martes"; fi
+if [ $resto -eq 3 ]; then echo "El resultado es miercoles"; fi
+if [ $resto -eq 4 ]; then echo "El resultado es jueves"; fi
+if [ $resto -eq 5 ]; then echo "El resultado es viernes"; fi
+if [ $resto -eq 6 ]; then echo "El resultado es sabado"; fi
+
+-----------------------------------------------------------------------------------------------
+
+
+for i in $(cat numeros.sh); do 
+
+echo "He leido un $i"
+
+done
+----------------------------------------------------------------------------------------------
+
+if [ $1 -lt 1 ]
+then
+
+echo "Se necesita un valor mayor"
+exit
+
+fi 
+
+for i in $(cat nombres.txt); do
+
+mkdir $i
+cd $i
+
+       for j in `seq 1 $1`;do 
+       mkdir personal$j
+
+       done
+
+       cd ..
+
+done
+------------------------------------------------------------------------------------------------------
+
+maxlineas=`cat precipitaciones.txt | wc -l`
+
+sumatotal=0
+for i in $(cat precipitaciones.txt | awk '{print $2}'); do
+
+    sumatotal=$((sumatotal+i))
+
+
+done
+
+
+media=`echo "scale=2; $sumatotal/$maxlineas" | bc`
+
+echo "La media de precipitaciones es $media"
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+maxlineas=`cat precipitaciones.txt | wc -l`
+contadror=1
+
+
+while [ $contador -le $maxlienas ];do
+
+for i in lunes martes miercoles jueves viernes sabado domingo ;do
+
+    
+    if [ $(cat precipitaciones.txt | awk '{print $2}' |head -$contador | tail -1) -eq 0 ]
+    then
+	echo "El $i no ha llovido"
+    fi
+
+    contador=$((contador+1))
+done
+done
+-----------------------------------------------------------------------------------------------------------------------
+
+
+maxnumeros=`cat numeros.txt | wc -l`
+contadorPAR=0
+contadorIMPAR=0
+contador=0
+
+for i in $(cat numeros.txt); do
+
+    resto=$((i%2))
+    
+    if [ $resto -eq 0 ]
+    then
+	echo "El $i es par" >> pares
+	contadorPAR=$((contadorPAR+1))
+    fi
+    
+    if [ $resto -gt 0 ]
+    then
+	echo "El $i es impar" >> impares
+	contadorIMPAR=$((contadorIMPAR+1))
+    fi
+    
+    contador=$((contador+1))
+
+  
+  
+  
+done
+
+  echo "El total de pares es $contadorPAR"
+  echo "El total de impares es $contadorIMPAR"
+  echo "El total de numeros es $contador"
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+

@@ -1,0 +1,1 @@
+SELECT NUM_EMP as"código", APELLIDO as"empleado", FECHA_ALTA from emp where SALARIO>="200000" and FECHA_ALTA>="1981";

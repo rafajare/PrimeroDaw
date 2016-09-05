@@ -1,0 +1,17 @@
+
+public class GuitarraElectrica extends InstrumentoDeCuerda{
+
+	public GuitarraElectrica(String n_,int numCuerdas_){
+		super( n_,numCuerdas_);
+	
+	}
+	
+	public GuitarraElectrica(){
+		this("zzz",0);
+	}
+	
+	public void tocar(){
+		
+		System.out.println("Esta guitarra tiene "+this+"número de cuerdas");
+	}
+}

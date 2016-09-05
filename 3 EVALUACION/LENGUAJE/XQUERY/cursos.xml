@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<cursos>
+	<curso id="1">
+		<nombre>Oracle</nombre>
+		<precio moneda="euro">800</precio>
+		<plazas>15</plazas>
+		<comienzo>1/9/2013</comienzo>
+		<fin>29/12/2013</fin>
+		<docente>Anselmo López López</docente>
+		<aula>TI2</aula>
+	</curso>
+	<curso id="2">
+		<nombre>PHP</nombre>
+		<precio moneda="euro">1000</precio>
+		<plazas>20</plazas>
+		<comienzo>1/6/2013</comienzo>
+		<fin>29/9/2013</fin>
+		<docente>Manolo García</docente>
+		<aula>TI4</aula>
+	</curso>
+</cursos>
+

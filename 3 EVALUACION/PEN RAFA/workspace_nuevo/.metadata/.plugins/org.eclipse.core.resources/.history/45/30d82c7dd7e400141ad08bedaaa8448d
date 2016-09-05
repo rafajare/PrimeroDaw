@@ -1,0 +1,10 @@
+
+public abstract class InstrumentoDeCuerda extends Instrumento {
+	
+	private int numCuerdas;
+	
+	public InstrumentoDeCuerda(int numCuerdas_){
+		numCuerdas=numCuerdas_;
+	}
+
+}

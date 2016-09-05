@@ -1,0 +1,22 @@
+
+public class TiendaElectronica {
+
+	private double peso;
+	private double dimensiones;
+	private double precios;
+	
+	public TiendaElectronica (double peso_, double dimensiones_, double precios_){
+		
+		peso=peso_;
+		dimensiones=dimensiones_;
+		precios=precios_;
+		String operadora;
+		boolean camara;
+		
+	}//MOVIL
+	
+	public TiendaElectronica (){
+		
+	}
+
+}

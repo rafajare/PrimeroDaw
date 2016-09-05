@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<tienda>
+
+	<Cds_oferta>
+
+				<CD>
+					<titulo>Still got the blues</titulo>
+					<artista>Gary Moore</artista>
+					<pais>UK</pais>
+					<compañia_discografica>Virgin records</compañia_discografica>
+					<precio>10.20€</precio>
+					<año>1990</año>
+				</CD>
+				
+				<CD>
+				
+					<titulo>One night only</titulo>
+					<artista>Bee Gees</artista>	
+					<pais>UK</pais>
+					<compañia_discografica>Polydor</compañia_discografica>
+					<precio>10.90€</precio>
+					<año>1998</año>	
+					
+				</CD>
+				
+				<CD>
+				
+					<titulo>When a man loves woman</titulo>
+					<artista>Percy Sledge</artista>
+					<pais>USA</pais>
+					<compañia_discografica>Atlantic</compañia_discografica>
+					<precio>8.70€</precio>
+					<año>1987</año>
+					
+				</CD>	
+				
+				<CD>
+				
+					<titulo>Big Willie stilye</titulo>
+					<artista>USA</artista>
+					<pais>9.90€</pais>
+					<compañia_discografica>Columbia</compañia_discografica>
+					<precio>9.90€</precio>
+					<año>1987</año>
+					
+				</CD>	
+				
+				
+				<CD>
+				
+					<titulo>La cancion de Juan Perro</titulo>
+					<artista>Radio futura</artista>
+					<pais>ESPAÑA</pais>
+					<compañia_discografica>Sony Music-Ariola</compañia_discografica>
+					<precio>9.90€</precio>
+					<año>1987</año>
+					
+				</CD>	
+
+	</Cds_oferta>
+	
+	
+</tienda>

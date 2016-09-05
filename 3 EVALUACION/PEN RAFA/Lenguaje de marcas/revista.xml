@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<revista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="revista.xsd">
+  <nombre>Bravo</nombre>
+  <codigo>1</codigo>
+  <fechaSalida>2014-5-20</fechaSalida>
+  <articulos>
+  	<autor>
+  	<nombreAutor>  Rafa </nombreAutor>
+	<dni> 7854744H </dni>
+	<edad> 		20	</edad>
+	<sexo>H</sexo>
+	</autor>
+    <numPalabras>50000</numPalabras>
+    <texto>hwhuewquhierwquhierwquhierwquhierwquhieruihreuhiehuierrrhhiuhhiu</texto>
+  </articulos>
+</revista>

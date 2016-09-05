@@ -1,0 +1,46 @@
+import java.util.Date;
+
+
+public class Empleados extens Persona{
+	
+	
+	private float salario;
+	
+	private static final int INICIO_EMPRESA =1995;
+
+	public Empleados(String nombre_, int salario_, int alta_empresa){
+		
+		nombre=nombre_;
+		salario=salario_;
+		altaEmpresa=altaEmpresa;
+		
+	}//Constructor
+	
+	public String getNombre(){
+		return nombre;
+	}
+	
+	public float getSalario(){
+		return salario;
+	}
+	
+	public int getaltaEmpresa(){
+		return altaEmpresa;
+	}
+
+	public void subirSalario(int subida){
+		
+			salario=salario+subida;
+			
+	}
+	
+	public void SetUsuarioAlta(int anyoAlta){
+		int anyooActual=1900 + new Date().getYear();
+		if (anyoAlta>= INICIO_EMPRESA  && anyooActual < altaEmpresa){
+			this.altaEmpresa=anyooActual;
+		} else {
+			System.out.println("Error");
+		}
+	}
+	
+}

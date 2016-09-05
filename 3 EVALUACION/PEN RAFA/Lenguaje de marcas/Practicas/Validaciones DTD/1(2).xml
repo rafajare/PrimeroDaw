@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE autopista 
+[
+<!ELEMENT autopista (evento*)>
+<!ELEMENT evento (señal, punto_kilometrico, nombre_via, sentido, corte_via, fecha_hora, retencion, kilometros_retencion)*>
+<!ELEMENT señal (#PCDATA)>
+<!ELEMENT punto_kilometrico (#PCDATA)>
+<!ELEMENT nombre_via (#PCDATA)>
+<!ELEMENT sentido (#PCDATA)>
+<!ELEMENT corte_via (#PCDATA)>
+<!ELEMENT fecha_hora (#PCDATA)>
+<!ELEMENT retencion (#PCDATA)>
+<!ELEMENT kilometros_retencion (#PCDATA)>
+
+]>
+
+<autopista>
+ 
+  <evento>
+ 
+	<señal> Señal de accidente </señal>
+	<punto_kilometrico>  42.200 </punto_kilometrico>
+	<nombre_via> A-49 </nombre_via>
+	<sentido> Huelva </sentido>
+	<corte_via> Carril 1 </corte_via>
+	<fecha_hora> 5 de Noviembre. 19:00 </fecha_hora>
+	<retencion> Si </retencion>
+	<kilometros_retencion> 8  </kilometros_retencion>
+	
+ </evento>
+ 
+ <evento>
+ 
+ 	<señal> Retencion </señal>
+	<punto_kilometrico>  550 </punto_kilometrico>
+	<nombre_via> A-4 </nombre_via>
+	<sentido> Sevilla </sentido>
+	<corte_via> Carril 1 </corte_via>
+	<fecha_hora> 5 de Noviembre. 15:00 </fecha_hora>
+	<retencion> Si </retencion>
+	<kilometros_retencion> 3  </kilometros_retencion>
+	
+ </evento>
+
+</autopista>

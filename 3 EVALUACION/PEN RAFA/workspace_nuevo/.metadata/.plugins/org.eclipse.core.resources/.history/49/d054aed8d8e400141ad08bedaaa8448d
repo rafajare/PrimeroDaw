@@ -1,0 +1,12 @@
+
+public class GuitarraElectrica extends InstrumentoDeCuerda{
+
+	public GuitarraElectrica(String n_,int numCuerdas_){
+		super( n_,numCuerdas_);
+	
+	}
+	
+	public void tocar(){
+		
+	}
+}

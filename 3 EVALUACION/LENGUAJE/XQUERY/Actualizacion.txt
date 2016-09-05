@@ -1,0 +1,98 @@
+insert node
+<curso id="3">
+  <nombre>Configuracion e instalacion de Linux</nombre>
+  <precio>300</precio>
+  <plazas>20</plazas>
+  <comienzo>1/9/2015</comienzo>
+  <fin>1/10/2015</fin>
+  <docente>Rafa Jareño</docente>
+  <aula>1.16</aula>
+</curso>
+as last into cursos
+
+
+
+
+
+
+
+
+replace value of node
+cursos/curso[@id="3"]/nombre with "Linux Basico"
+
+
+
+
+
+
+
+
+insert node
+<baile id="7">
+<nombre>Foxtrot</nombre>
+<precio>22</precio>
+<plazas>12</plazas>
+<comienzo>01/03/2014</comienzo>
+<fin>30/03/2014</fin>
+<profesor>Freddy Astaire</profesor>
+<sala>3</sala>
+</baile>
+as last into Bailes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+replace value of node 
+Bailes/baile[@id="7"]/profesor with "Angel Sanchez"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+replace value of node 
+Bailes/baile[profesor="Angel Sanchez"]/nombre with "Rafa Jareño"
+
+
+
+
+
+
+
+
+
+
+
+
+delete node doc("bailes.xml")/
+Bailes/baile[@id="7"]

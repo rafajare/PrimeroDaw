@@ -1,0 +1,19 @@
+import java.util.*;
+
+
+public class Editorial {
+
+	private HashMap <String,Publicacion> publicaciones;
+	
+	public Editorial(HashMap<String,Publicacion> publicaciones_){
+		
+		publicaciones= publicaciones_;
+	
+	}
+	
+	public Editorial(){
+		publicaciones= new HashMap();
+	}
+
+}	
+

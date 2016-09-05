@@ -1,0 +1,13 @@
+sudo chgrp marketing marketing
+sudo adduser jordi interfaz
+
+
+sudo chmod 777 /home/proyecto
+chmod g+rw 
+
+
+--remove-home +user
+
+gropuadd ?name ?name ??namegroup---
+
+

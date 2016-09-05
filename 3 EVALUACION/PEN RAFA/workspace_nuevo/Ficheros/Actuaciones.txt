@@ -1,0 +1,4 @@
+Valencia 5 100
+Londres 4 2000
+Bruselas 6 7500
+París 4 1000

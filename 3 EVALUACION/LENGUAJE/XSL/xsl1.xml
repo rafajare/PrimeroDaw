@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet version="1.0" type="text/xsl" href="hoja.xsl"?>
+<clase>
+<profesores>
+<profesor>
+  <nombre> Juanmi </nombre>
+  <apellido>Alberola</apellido>
+</profesor>
+
+<profesor>
+ <nombre> Paco </nombre>
+ <apellido> Gómez </apellido>
+</profesor>
+</profesores>
+
+<alumnos>
+ <alumno>
+	<nombre> Esteban </nombre>
+	<apellido> Tolosa </apellido>
+ </alumno>
+ 
+ <alumno>
+ 	<nombre>David</nombre>
+	<apellido>Flores</apellido> 	
+ </alumno>
+ </alumnos>	
+</clase>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plantilla xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tareaPuntuable.xsd">
+<futbolista nombre="Feghouli" edad="25">
+<equipo nombre="Valencia"/>
+<equipo nombre="Almeria"/>
+<equipo nombre="Grenoble"/>
+<posicion>centrocampista</posicion>
+</futbolista>
+<futbolista nombre="Parejo" edad="24">
+<equipo nombre="Valencia"/>
+<equipo nombre="QPR"/>
+<equipo nombre="Getafe"/>
+<equipo nombre="RealMadrid"/>
+<posicion>centrocampista</posicion>
+</futbolista>
+<futbolista nombre="Alcacer" edad="21">
+<equipo nombre="Valencia"/>
+<posicion>delantero</posicion>
+</futbolista>
+</plantilla>

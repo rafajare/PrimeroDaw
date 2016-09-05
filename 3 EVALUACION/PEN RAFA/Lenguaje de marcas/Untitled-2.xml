@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="hoja2.css"?>
+
+<CD genero="POP"> <!--INDICA EL GENERO DEL CD-->
+
+  <titulo>     LUZ DE ALMA   </titulo>
+  <fechacreacion>       1 de enero de 2014      </fechacreacion>
+  
+<canciones numero="3">
+
+<cancion>  
+<nombre duracion="2:45">bhbjehjbhbjfre</nombre>
+</cancion>
+
+
+<cancion>  
+<nombre duracion="3:15">ffhjfjhkejkhrjk</nombre>  
+</cancion>
+
+<cancion>
+<nombre duracion ="2:07"> hhjerrfhjerhj </nombre> 
+</cancion>
+
+</canciones>
+
+<artista> 
+<nombre-artista>Pepe</nombre-artista> 
+<datos-personales> Junio 1982- Valencia </datos-personales>
+</artista>
+
+<![CDATA[ILEGAL: esto es una prueba]]>
+<DOC_ELEMENT>
+    <SUB_ELEMENT> <![CDATA[ILEGAL: esto es otra prueba]]>
+        contenido del subelemento…
+  </SUB_ELEMENT>
+</DOC_ELEMENT>
+
+</CD>
+
+
+
+  
+  

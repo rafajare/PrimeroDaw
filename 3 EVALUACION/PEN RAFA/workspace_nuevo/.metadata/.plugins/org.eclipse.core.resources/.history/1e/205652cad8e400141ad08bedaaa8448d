@@ -1,0 +1,16 @@
+
+public class BajoElectrico extends InstrumentoDeCuerda{
+	
+	public BajoElectrico(String n_,int numCuerdas_){
+		super(n_,numCuerdas_);
+		
+	}
+
+	public BajoElectrico(){
+		this("zzz",0)
+	}
+	
+	public void tocar(){
+		
+	}
+}

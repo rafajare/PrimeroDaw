@@ -1,0 +1,10 @@
+import java.util.*;
+
+
+public class Editorial {
+
+	private HashMap <Integer,Publicacion> publicaciones  = new HashMap();
+	
+
+}	
+

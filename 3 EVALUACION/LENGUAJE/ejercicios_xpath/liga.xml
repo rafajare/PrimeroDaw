@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<liga edicio="1">
+    <descripcion>
+        <nombre>Primera</nombre>
+        <lista-equipos>
+            <club>
+                <nombre>Valencia</nombre>
+                <entrenador>Nuno</entrenador>
+            </club>
+            <club>
+                <nombre>Barcelona</nombre>
+                <entrenador>Luis Enrique</entrenador>
+            </club>
+            <club>
+                <nombre>Sevilla</nombre>
+                <entrenador>Unai Emery</entrenador>
+            </club>
+            <club>
+                <nombre>Real Madrid</nombre>
+                <entrenador>Ancelotti</entrenador>
+            </club>
+        </lista-equipos>
+    </descripcion>
+    
+    <jornada num="1">
+        <partido num="1">
+            <dia>23-12-2010</dia>
+            <equipo juega="local">
+                <nombre>Valencia</nombre>
+                <resultado>2</resultado>
+                <goles>
+                    <jugador minuto="12">Parejo</jugador>
+                    <jugador minuto="60">Rodrigo</jugador>
+                </goles>                
+            </equipo>
+            
+            <equipo juega="visitante">
+                <nombre>Barcelona</nombre>
+                <resultado>0</resultado>
+                <goles />
+            </equipo>
+        </partido>
+        
+        <partido num="2">
+            <dia>23-12-2010</dia>
+            <equipo juega="local">
+                <nombre>Sevilla</nombre>
+                <resultado>1</resultado>
+                <goles>
+                    <jugador minuto="90">Bacca</jugador>
+                </goles>
+            </equipo>
+            <equipo juega="visitante">
+                <nombre>Real Madrid</nombre>
+                <resultado>1</resultado>
+                <goles>
+                    <jugador minuto="24">Benzema</jugador>
+                </goles>
+            </equipo>
+        </partido>
+    </jornada>
+    
+    <jornada num="2">
+        
+        <partido num="1">
+            <dia>30-12-2010</dia>
+
+            <equipo juega="local">
+                <nombre>Sevilla</nombre>
+                <resultado>1</resultado>
+                <goles>
+                    <jugador minuto="5">Bacca</jugador>                    
+                </goles>
+            </equipo>
+
+            <equipo juega="visitante">
+                <nombre>Valencia</nombre>
+                <resultado>2</resultado>
+                <goles>
+                    <jugador minuto="71">Alcacer</jugador>
+					<jugador minuto="10">Negredo</jugador>
+                </goles>
+            </equipo>
+        </partido>
+        
+        <partido num="2">
+            <dia>31-12-2010</dia>
+
+            <equipo juega="local">
+                <nombre>Real Madrid</nombre>
+                <resultado>0</resultado>
+                <goles />
+            </equipo>
+
+            <equipo juega="visitante">
+                <nombre>Barcelona</nombre>
+                <resultado>4</resultado>
+                <goles>
+                    <jugador minuto="25">Messi</jugador>
+                    <jugador minuto="39">Messi</jugador>
+                    <jugador minuto="56">Mathieu</jugador>
+                    <jugador minuto="70">Messi</jugador>
+                </goles>
+            </equipo>
+        </partido>
+        
+    </jornada>
+    
+    <jornada num="3">
+
+        <partido num="1">
+            <dia>07-01-2011</dia>
+            
+            <equipo juega="local">
+                <nombre>Valencia</nombre>
+                <resultado>0</resultado>
+                <goles />                
+            </equipo>
+            
+            <equipo juega="visitante">
+                <nombre>Real Madrid</nombre>
+                <resultado>0</resultado>
+                <goles />                
+            </equipo>            
+        </partido>
+        
+        <partido num="2">
+            <dia>07-01-2011</dia>
+            
+            <equipo juega="local">
+                <nombre>Sevilla</nombre>
+                <resultado>1</resultado>
+                <goles>
+                    <jugador minuto="33">Bacca</jugador>
+                </goles>
+            </equipo>
+            
+            <equipo juega="visitante">
+                <nombre>Barcelona</nombre>
+                <resultado>2</resultado>
+                <goles>
+                    <jugador minuto="24">Messi</jugador>
+                    <jugador minuto="60">Messi</jugador>
+                </goles>
+            </equipo>            
+        </partido>
+        
+    </jornada>
+    
+    <jornada num="4">
+        
+        <partido num="1">
+            <dia>14-01-2011</dia>
+            
+            <equipo juega="local">
+                <nombre>Real Madrid</nombre>
+                <resultado>0</resultado>
+                <goles />                
+            </equipo>
+            
+            <equipo juega="visitante">
+                <nombre>Valencia</nombre>
+                <resultado>1</resultado>
+                <goles>
+                    <jugador minuto="89">Alcacer</jugador>
+                </goles>
+            </equipo>            
+        </partido>
+        
+        <partido num="2">
+            <dia>15-01-2011</dia>
+            
+            <equipo juega="local">
+                <nombre>Barcelona</nombre>
+                <resultado>5</resultado>
+                <goles>
+                    <jugador minuto="3">Messi</jugador>
+                    <jugador minuto="18">Neymar</jugador>
+                    <jugador minuto="30">Messi</jugador>
+                    <jugador minuto="51">Messi</jugador>
+                    <jugador minuto="70">Mathieu</jugador>
+                </goles>
+            </equipo>
+            
+            <equipo juega="visitante">
+                <nombre>Sevilla</nombre>
+                <resultado>1</resultado>
+                <goles>
+                    <jugador minuto="25">Bacca</jugador>
+                </goles>
+            </equipo>            
+        </partido>
+        
+    </jornada>
+    
+    <jornada num="5">
+                
+        <partido num="1">
+            <dia>21-01-2011</dia>
+            
+            <equipo juega="local">
+                <nombre>Valencia</nombre>
+                <resultado>2</resultado>
+                <goles>
+                    <jugador minuto="39">Parejo</jugador>
+                    <jugador minuto="52">Gaya</jugador>
+                </goles>
+            </equipo>
+            
+            <equipo juega="visitante">
+                <nombre>Sevilla</nombre>
+                <resultado>1</resultado>
+                <goles>
+                    <jugador minuto="22">Gameiro</jugador>
+                </goles>
+            </equipo>            
+        </partido>
+        
+        <partido num="2">
+            <dia>21-01-2011</dia>
+
+            <equipo juega="local">
+                <nombre>Barcelona</nombre>
+                <resultado>1</resultado>
+                <goles>
+                    <jugador minuto="34">Messi</jugador>
+                </goles>
+            </equipo>
+
+            <equipo juega="visitante">
+                <nombre>Real Madrid</nombre>
+                <resultado>1</resultado>
+                <goles>
+                    <jugador minuto="5">Ronaldo</jugador>
+                </goles>
+            </equipo>
+        </partido>
+        
+    </jornada>
+    
+    <jornada num="6">
+  
+        <partido num="1">
+            <dia>27-01-2011</dia>
+
+            <equipo juega="local">
+                <nombre>Barcelona</nombre>
+                <resultado>1</resultado>
+                <goles>
+                    <jugador minuto="15">Messi</jugador>
+                </goles>
+            </equipo>
+
+            <equipo juega="visitante">
+                <nombre>Valencia</nombre>
+                <resultado>3</resultado>
+                <goles>
+                    <jugador minuto="22">Alcacer</jugador>
+                    <jugador minuto="25">Otamendi</jugador>
+                    <jugador minuto="28">Mustafi</jugador>
+                </goles>
+            </equipo>
+        </partido>
+        
+        <partido num="2">
+            <dia>27-01-2011</dia>
+
+            <equipo juega="local">
+                <nombre>Real Madrid</nombre>
+                <resultado>0</resultado>
+                <goles />                
+            </equipo>
+
+            <equipo juega="visitante">
+                <nombre>Sevilla</nombre>
+                <resultado>2</resultado>
+                <goles>
+                    <jugador minuto="23">Bacca</jugador>
+                    <jugador minuto="49">Gameiro</jugador>
+                </goles>
+            </equipo>
+        </partido>
+        
+    </jornada>
+
+</liga>

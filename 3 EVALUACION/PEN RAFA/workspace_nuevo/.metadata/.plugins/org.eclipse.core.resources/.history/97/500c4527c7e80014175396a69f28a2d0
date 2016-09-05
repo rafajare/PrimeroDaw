@@ -1,0 +1,32 @@
+import java.util.*;
+
+
+public class Publicacion{
+	
+	private String titulo;
+	private int Anyo;
+	private int ISBN;
+	private ArrayList <Autor> autores ;
+	
+	
+	
+	public Publicacion(String titulo_,int Anyo_,int ISBN_) {
+		
+		
+	titulo=titulo_;
+	Anyo=Anyo_;
+	ISBN=ISBN_;	
+	autores= new ArrayList <Autor>();
+	
+	}
+	
+	public Publicacion(String titulo_,int Anyo_,int ISBN_, ArrayList<Autor>autores_) {
+		
+		
+		titulo=titulo_;
+		Anyo=Anyo_;
+		ISBN=ISBN_;	
+		autores= autores_;
+		
+		}
+}

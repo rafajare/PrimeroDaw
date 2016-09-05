@@ -1,0 +1,11 @@
+
+public abstract class InstrumentoDeCuerda extends Instrumento {
+	
+	private int numCuerdas;
+	
+	public InstrumentoDeCuerda(String n_,int numCuerdas_){
+		super(String n_);
+		numCuerdas=numCuerdas_;
+	}
+
+}

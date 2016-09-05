@@ -1,0 +1,140 @@
+<html>
+<body>
+<h1>Tabla</h1>
+<table>{
+for $lib in /bib/libro
+return
+  <tr>{
+  
+      
+       <td>{$lib/titulo/text()}</td>
+}
+  </tr>
+}
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+  <body>
+  
+    <table>
+      <tr>
+      <th>Nombre</th>
+      <th>Profesor</th>
+      <th>Plazas</th>
+      </tr>
+{     
+for $baile in Bailes/baile
+let $nombre:=$baile/nombre/text()
+let $profesor:=$baile/profesor/text()
+let $plazas:=$baile/plazas/text()
+return
+
+    <tr>{
+      
+      <Bailes>
+      <td>{$nombre}</td>
+     
+      <td>{$profesor}</td>
+      
+      <td>{$plazas}</td>
+     
+       </Bailes>
+    }
+    
+   
+    </tr>
+    
+    }
+  
+    </table>
+  
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<body>
+
+<table border="4">
+<tr>
+<th>Nombre</th>
+<th>Precio</th>
+<th>Profesor</th>
+<th>Plazas</th>
+</tr>
+
+{
+for $baile in Bailes/baile
+let $nombre:=$baile/nombre/text()
+let $precio:=$baile/precio/text()
+let $profesor:=$baile/profesor/text()
+let $plazas:=$baile/plazas/text()
+where $baile/precio/@cuota="trimestral"
+order by($plazas)
+
+return<tr>
+<td>{$nombre}</td>
+<td>{$precio}</td>
+<td>{$profesor}</td>
+<td>{$plazas}</td>
+</tr>
+}
+</table>
+
+</body>
+</html>

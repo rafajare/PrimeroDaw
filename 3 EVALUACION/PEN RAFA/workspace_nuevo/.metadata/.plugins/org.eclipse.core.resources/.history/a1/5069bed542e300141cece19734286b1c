@@ -1,0 +1,27 @@
+
+public class Dispositivos {
+	
+private double peso;
+private double dimensiones;
+private double precios;
+
+public void Dispositivos (double peso, double dimensiones, double precios){
+	this.peso=peso;
+	this.dimensiones=dimensiones;
+	this.precios=precios;
+	
+}//FIN
+
+public Dispositivos(){
+	this (0, 0, 0 );
+}
+
+public void imprimir(){
+	
+	System.out.println("Peso =" + peso);
+	System.out.println("dimensiones =" + dimensiones);
+	System.out.println("precios =" + precios);
+	
+}
+
+}

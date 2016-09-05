@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<centro nombre="Florida">
+    <ciclos>
+        <especialidad nombre="Informática">
+            <ciclo id="DAW" grado="Superior">Desarrollo Aplicaciones Web</ciclo>
+            <ciclo id="TSMR" grado="Medio">Sistemas Microinformáticos y Redes</ciclo>
+        </especialidad>
+        <especialidad nombre="Marketing">
+            <ciclo id="MEK" grado="Superior">Gestión Comercial y Marketing</ciclo>
+						<ciclo id="COM" grado="Medio">Comercialización</ciclo>
+        </especialidad>
+    </ciclos>
+    <notas>
+        <clase nombre="TSMR">
+            <alumno aprobado="SI"><nombre>Federico Garcia</nombre><nota>8</nota><email>fede@hotmail.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="NO"><nombre>Alberto Bru</nombre><email>ab@potas.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Manolito Capdeconill</nombre><nota>8</nota><email>manolito@hotmail.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Filomenu Pi</nombre><nota>8</nota><email>filo@gmail.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="NO"><nombre>Santiago Rabasa</nombre><email>santi@destroyer.cat</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Vicente Rana</nombre><nota>8</nota><email>rana@hotmail.com</email><genero>Hombre</genero></alumno>
+        </clase>
+        <clase nombre="DAW">
+            <alumno aprobado="NO"><nombre>Jose Palla</nombre><email>jcp@gmail.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Mohamed Polih</nombre><nota>5</nota><email>moha@correus.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Juan Pérez</nombre><nota>6</nota><email>jupe@xmailx.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Filibert Puig</nombre><nota>5</nota><email>filib@mymail.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Bernat Tomacastanya</nombre><nota>9</nota><email>bern@hotmail.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="NO"><nombre>Paco Barnadas</nombre><email>samu-samu@barnadas.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Felipe Martí</nombre><nota>5</nota><email>fmarti@gmail.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="NO"><nombre>Juanjo Roig</nombre><email>jr@hotmail.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Magdalena Serra</nombre><nota>10</nota><email>magda10@kissmail.com</email><genero>Mujer</genero></alumno>            
+        </clase>
+        <clase nombre="MEK">
+            <alumno aprobado="SI"><nombre>Maria Pinta</nombre><nota>6</nota><email>maripi@hotmail.com</email><genero>Mujer</genero></alumno>
+            <alumno aprobado="NO"><nombre>Judith González</nombre><email>judigonza@mymail.net</email><genero>Mujer</genero></alumno>
+            <alumno aprobado="SI"><nombre>Sandra Taylor</nombre><nota>7</nota><email>sandrat@mail.com</email><genero>Mujer</genero></alumno>
+            <alumno aprobado="SI"><nombre>Andreu Verd</nombre><nota>5</nota><email>verd-clar@tymail.net</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Jaqueline Zumo</nombre><nota>6</nota><email>zumo@sol.es</email><genero>Mujer</genero></alumno>
+            <alumno aprobado="SI"><nombre>Natasha Koma</nombre><nota>9</nota><email>yoda@pissmail.ru</email><genero>Mujer</genero></alumno>
+        </clase>
+        <clase nombre="AF">
+            <alumno aprobado="SI"><nombre>Eli Prisa</nombre><nota>6</nota><email>elipri@gmail.com</email><genero>Mujer</genero></alumno>
+            <alumno aprobado="NO"><nombre>Gori Gori</nombre><email>goripu@hotmail.com</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Adela Entado</nombre><nota>3</nota><email>ade14@yahoo.com</email><genero>Mujer</genero></alumno>
+            <alumno aprobado="SI"><nombre>Toni Cirerer</nombre><nota>5</nota><email>cirerer-florit@correu.cat</email><genero>Hombre</genero></alumno>
+            <alumno aprobado="SI"><nombre>Mari Luz de Luna</nombre><nota>10</nota><email>marilu@llummail.cat</email><genero>Mujer</genero></alumno>
+            <alumno aprobado="SI"><nombre>Teodore Poussin</nombre><nota>5</nota><email>tpss@hotmail.com</email><genero>Hombre</genero></alumno>            
+        </clase>
+    </notas>
+</centro>

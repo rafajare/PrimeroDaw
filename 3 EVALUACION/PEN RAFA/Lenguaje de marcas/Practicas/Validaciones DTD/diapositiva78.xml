@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tienda_animales 
+[
+	<!ELEMENT tienda_animales (perro)*>
+	<!ELEMENT perro (#PCDATA)>
+	<!ATTLIST perro fecha_nacimiento CDATA " ">
+	<!ATTLIST perro fecha_venta CDATA " ">
+]>
+
+<tienda_animales>
+	<perro fecha_nacimiento ="2014" fecha_venta="2014">    
+	
+	</perro>
+	
+</tienda_animales>	
+	

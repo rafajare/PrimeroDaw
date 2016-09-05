@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet version="1.0" type="text/xsl" href="notas-alumnos.xsl"?>
+<departamento nombre="Informatica">
+  <alumnos>
+    <alumno>
+      <nombre>Federico</nombre>
+      <apellido>Garcia</apellido>
+      <apellido>Puig</apellido>
+      <creditos>
+        <credito>
+          <nombre>Lenguajes de marcas</nombre>
+          <nota>6</nota>
+        </credito>
+        <credito>
+          <nombre>Programación</nombre>
+          <nota>5</nota>
+        </credito>
+        <credito>
+          <nombre>Bases de datos</nombre>
+          <nota>3</nota>
+        </credito>
+      </creditos>
+    </alumno>
+    <alumno>
+      <nombre>Chelo</nombre>
+      <apellido>Pino</apellido>
+      <apellido>Bruno</apellido>
+      <creditos>
+        <credito>
+          <nombre>Lenguajes de marcas</nombre>
+          <nota>9</nota>
+        </credito>
+        <credito>
+          <nombre>Programación</nombre>
+          <nota>9</nota>
+        </credito>
+        <credito>
+          <nombre>Bases de datos</nombre>
+          <nota>9</nota>
+        </credito>
+      </creditos>
+    </alumno>
+    <alumno>
+      <nombre>Francisco</nombre>
+      <apellido>Fernandez</apellido>
+      <apellido>Torres</apellido>
+      <creditos>
+        <credito>
+          <nombre>Lenguajes de marcas</nombre>
+          <nota>2</nota>
+        </credito>
+        <credito>
+          <nombre>Programación</nombre>
+          <nota>3</nota>
+        </credito>
+        <credito>
+          <nombre>Bases de datos</nombre>
+          <nota>9</nota>
+        </credito>
+      </creditos>
+    </alumno>
+    <alumno>
+      <nombre>Bernardo</nombre>
+      <apellido>Alegria</apellido>
+      <creditos>
+        <credito>
+          <nombre>Lenguajes de marcas</nombre>
+          <nota>5</nota>
+        </credito>
+        <credito>
+          <nombre>Programación</nombre>
+          <nota>1</nota>
+        </credito>
+        <credito>
+          <nombre>Bases de datos</nombre>
+          <nota>6</nota>
+        </credito>
+      </creditos>
+    </alumno>
+    <alumno>
+      <nombre>Pedro</nombre>
+      <apellido>Blanch</apellido>
+      <apellido>Blanch</apellido>
+      <creditos>
+        <credito>
+          <nombre>Lenguajes de marcas</nombre>
+          <nota>7</nota>
+        </credito>
+        <credito>
+          <nombre>Programación</nombre>
+          <nota>4</nota>
+        </credito>
+        <credito>
+          <nombre>Bases de datos</nombre>
+          <nota>4</nota>
+        </credito>
+      </creditos>
+    </alumno>
+    <alumno>
+      <nombre>Magdalena</nombre>
+      <apellido>Roig</apellido>
+      <apellido>Fernández</apellido>
+      <creditos>
+        <credito>
+          <nombre>Lenguajes de marcas</nombre>
+          <nota>5</nota>
+        </credito>
+        <credito>
+          <nombre>Programación</nombre>
+          <nota>5</nota>
+        </credito>
+        <credito>
+          <nombre>Bases de datos</nombre>
+          <nota>5</nota>
+        </credito>
+      </creditos>
+    </alumno>
+  </alumnos>
+</departamento>

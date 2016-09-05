@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+
+public class PruebaBiblioteca {
+	public static void main(String args[]){
+	
+	Scanner teclado=new Scanner(System.in);
+	
+	Libro l1=new Libro("Lacasadelosespiritus", "IsabelAllende", 1980, "Travel", 456456456);
+
+	}
+}

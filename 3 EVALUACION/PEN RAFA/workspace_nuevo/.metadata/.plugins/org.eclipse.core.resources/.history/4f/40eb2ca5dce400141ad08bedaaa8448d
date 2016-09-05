@@ -1,0 +1,7 @@
+
+public class Ejecucion {
+
+	GuitarraElectrica g1= new Instrumento("Guitarra",5);
+	
+	
+}

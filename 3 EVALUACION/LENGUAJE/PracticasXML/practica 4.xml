@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coche>
+	<fabricante>
+		<nombre> Opel</nombre>
+		<modelo>Astra GSI</modelo>
+		<motor cilindrada="2.0i"/>
+		<color> marrón</color>
+		</fabricante>
+</coche>

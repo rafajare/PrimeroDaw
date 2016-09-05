@@ -1,0 +1,25 @@
+for $lib in doc("libros") /bib/libro
+for $ent in doc("COMENTARIOS")/comentarios/entrada
+let $tit:=$lib/titulo/text()
+let $año:=$lib/@año/data()
+let $tit2:=$ent/titulo/text()
+let $coment:=$ent/comentario
+where $tit=$tit2
+return <libro>{
+<titulo>{$tit}</titulo>,<año>{$año}</año>,$coment}</libro>
+
+
+
+
+for $lib in doc("libros") /bib/libro
+for $ent in doc("COMENTARIOS")/comentarios/entrada
+let $tit:=$lib/titulo/text()
+let $precio:=$lib/precio/text()
+let $tit2:=$ent/titulo/text()
+let $precio2:=$ent/precio/text()
+where $tit=$tit2
+return <libro>{
+<titulo>{$tit}</titulo>,
+<precio>{$precio}</precio>,
+<precio2>{$precio2}</precio2>}
+</libro>

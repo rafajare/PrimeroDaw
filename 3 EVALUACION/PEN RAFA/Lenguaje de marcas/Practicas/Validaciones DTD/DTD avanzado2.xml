@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE editorial
+[
+<!ELEMENT editorial (descripcion, fecha, region*)>
+<!ELEMENT region ( trimestres)>
+<!ELEMENT trimestres ( trimestre*)>
+<!ELEMENT trimestre (libros_vendidos)>
+<!ELEMENT descripcion (#PCDATA) > 
+<!ELEMENT fecha EMPTY>
+<!ATTLIST fecha informe CDATA #REQUIRED>
+<!ATTLIST region  pais ( Norte| Centro| Sur) #REQUIRED>
+<!ATTLIST trimestre num ( 1| 2| 3|4) #REQUIRED>
+<!ELEMENT libros_vendidos EMPTY>
+<!ATTLIST libros_vendidos total CDATA "NO_INFO" >
+]>
+
+
+
+
+
+<editorial>
+	
+	<descripcion> informe de ventas para las regiones Norte, Centro y Sur </descripcion>
+	<fecha informe="30/12/2009" />
+	 
+	<region pais ="Norte">
+		<trimestres>
+		<trimestre num = "1">
+		<libros_vendidos total = "24000" />
+		</trimestre>
+		<trimestre num = "2">
+		<libros_vendidos total =" 38600" />
+		</trimestre>
+		<trimestre num = "3">
+		<libros_vendidos total = "NO_INFO" />
+		</trimestre>
+		<trimestre num ="4">
+		<libros_vendidos total = "38600" />
+		</trimestre>
+		</trimestres>
+	</region>
+	<region pais ="Centro">
+		<trimestres>
+		<trimestre num = "1">
+		<libros_vendidos total = "24000" />
+		</trimestre>
+		<trimestre num = "2">
+		<libros_vendidos total =" 38600" />
+		</trimestre>
+		<trimestre num = "3">
+		<libros_vendidos total = "NO_INFO" />
+		</trimestre>
+		<trimestre num ="4">
+		<libros_vendidos total = "38600" />
+		</trimestre>
+		</trimestres>
+	</region>
+	<region pais ="Sur">
+		<trimestres>
+		<trimestre num = "1">
+		<libros_vendidos total = "24000" />
+		</trimestre>
+		<trimestre num = "2">
+		<libros_vendidos total =" 38600" />
+		</trimestre>
+		<trimestre num = "3">
+		<libros_vendidos total = "NO_INFO" />
+		</trimestre>
+		<trimestre num ="4">
+		<libros_vendidos total = "38600" />
+		</trimestre>
+		</trimestres>
+	</region>
+	
+</editorial>

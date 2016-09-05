@@ -1,0 +1,31 @@
+import java.util.*;
+
+
+public class Editorial {
+
+	private HashMap <String,Publicacion> publicaciones;
+	
+	public Editorial(HashMap<String,Publicacion> publicaciones_){
+		
+		publicaciones= publicaciones_;
+	
+	}
+	
+	public Editorial(){
+		publicaciones= new HashMap();
+	}
+
+	
+	public String buscarPublicacion(String ISBN){
+		return publicaciones.get(ISBN).toString();
+	
+	}
+	
+	public void setPublicacion(String ISBN,Publicacion publicacion_){
+		HashMap publicaciones=new HashMap();
+		publicaciones.put(ISBN, publicacion_);
+	}
+	
+	
+}	
+

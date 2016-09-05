@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+ 
+
+
+<form action="http://www.prueba.es/maneja_formulario.php" method="post">
+<fieldset> 
+<legend>Datos personales</legend> <br />
+<table>
+<tr>
+<td>Nombre</td>
+<td><input type="text" name="nombre" value="" /></td>
+</tr>
+<tr>
+<td>Apellidos</td>
+<td><input type="text" name="apellidos" value="" /></td>
+</tr>
+<tr>
+<td>F.Nacimiento</td>
+<td><input type="text" name="nacimiento" value="" /></td>
+</tr>
+<td>Calle y Número</td>
+<td><input type="text" name="cyn" value="" /></td>
+<tr>
+<td>Código postal</td>
+<td> <input type="text" name="cp" maxlength="5" size="5" value="" /> </td>
+</tr>
+<td>Provincia</td><td> <input type="text" name="provincia" value="" />
+&nbsp; Teléfonofono &nbsp;&nbsp; <input type="text" name="telefono" maxlength="9" size="9" value="" /></td>
+</tr>
+<tr>
+<td>Sexo</td>
+<td><input type="radio" name="sexo" value="Hombre" />Hombre &nbsp;&nbsp;&nbsp; <input type="radio" name="sexo" value="Mujer" />Mujer
+&nbsp;&nbsp; <select name="nombre" selected="Soltero" value="Estado" >
+<option value="soltero">Soltero</option>
+<option value="casado">Casado</option>
+</select></td>
+<tr>
+<td>Idiomas</td>
+<td><input type="checkbox" name="idioma" value="espanol" />Español &nbsp;&nbsp; <input type="checkbox" name="idioma" value="frances" />Franc&eacute;s
+&nbsp;&nbsp; <input type="checkbox" name="idioma" value="ingles" />Inglés
+&nbsp;&nbsp; <input type="checkbox" name="idioma" value="aleman" />Alemán</td>
+</tr>
+<tr>
+<td>Comentarios Personales</td>
+<td> <textarea name="compersonales" value=""></textarea></td>
+</tr>
+<tr>
+<td></td><td><input type="submit" name="enviar" value="enviar los datos"/>
+<input type="reset" name="borrar" value="borrad los datos" /></td>
+</tr>
+</fieldset> 
+</form>
+
+</body>
+</html>

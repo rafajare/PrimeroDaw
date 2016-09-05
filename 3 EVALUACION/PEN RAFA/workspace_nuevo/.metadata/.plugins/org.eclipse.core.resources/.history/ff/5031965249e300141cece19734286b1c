@@ -1,0 +1,33 @@
+
+public class Becario{
+
+	private String nombre;
+	private int año_alta;
+	private int departamento;
+	
+	public Becario(String n, int a_Alta, int d){
+		this.nombre=n;
+		this.año_alta=a_Alta;
+		this.departamento=d;
+		
+	}
+	public String getNombre(){
+		return nombre;
+
+	}
+	
+	public int getAlta(){
+		return año_alta;
+	}
+	
+	public int getDepartamento(){
+		return departamento;
+	}
+	
+ public void getDatos(){
+	 System.out.println("Nombre "+nombre);
+	 System.out.println("Año de alta " +  año_alta);
+	 System.out.println("Departamento" + departamento);
+ }
+	
+}//FIN
