@@ -1,0 +1,85 @@
+import java.util.*;
+
+
+public class Eventos {
+	
+	Scanner teclado=new Scanner (System.in);
+	
+	private String dni;
+	private String nombre;
+	private String localCelebracion;
+	private String ciudad;
+	private String estado;
+	private Date hora;
+	private Date fecha;
+	private String tipo;
+	private String eventos ="??"; /*ArrayList*/
+	
+	
+	
+	public Eventos(String dni_, String nombre_, String localCelebracion_, String ciudad_, String estado_, Date hora_, Date fecha, String tipo_){
+		
+		dni=dni_;
+		nombre=nombre_;
+		localCelebracion=localCelebracion;
+		ciudad=ciudad;
+		estado=estado_;
+		hora=hora_;
+		fecha=fecha;
+		tipo=tipo_;
+		
+		
+		
+	}
+	
+	
+	public String getDni() {
+		return dni;
+	}
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getLocalCelebracion() {
+		return localCelebracion;
+	}
+	public void setLocalCelebracion(String localCelebracion) {
+		this.localCelebracion = localCelebracion;
+	}
+	public String getCiudad() {
+		return ciudad;
+	}
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	public Date getHora() {
+		return hora;
+	}
+	public void setHora(Date hora) {
+		this.hora = hora;
+	}
+	public Date getFecha() {
+		return fecha;
+	}
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+}

@@ -1,0 +1,246 @@
+package GUI;
+
+
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import java.awt.EventQueue;
+import java.awt.Window.Type;
+import java.net.URL;
+
+import javax.swing.JButton;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+import javax.swing.JPanel;
+
+import java.awt.SystemColor;
+
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+
+
+public class Inicio {
+
+	private JFrame InterfazInicio;
+	private JTextField username;
+	private JPasswordField passwordField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Inicio window = new Inicio();
+					window.InterfazInicio.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Inicio() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		InterfazInicio = new JFrame();
+		InterfazInicio.setBounds(100, 100, 930, 470);
+		InterfazInicio.setResizable(false);
+		InterfazInicio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		InterfazInicio.getContentPane().setLayout(null);
+		InterfazInicio.setTitle("Event4all - Inicio");
+		
+		JButton btnInvitado = new JButton("Invitado");
+		btnInvitado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		
+		JLabel iniciars = new JLabel();
+		iniciars.setIcon(new ImageIcon(this.getClass().getResource("/imgs/iniciar.png")));
+		iniciars.setBounds(692, 173, 60, 54);
+		InterfazInicio.getContentPane().add(iniciars);
+		
+		
+		JLabel write = new JLabel();
+		write.setIcon(new ImageIcon(this.getClass().getResource("/imgs/write.png")));
+		write.setBounds(575, 321, 60, 54);
+		InterfazInicio.getContentPane().add(write);
+		
+		
+
+		JLabel invitao = new JLabel();
+		invitao.setIcon(new ImageIcon(this.getClass().getResource("/imgs/iniciarsesion.png")));
+		invitao.setBounds(206, 340, 60, 54);
+		InterfazInicio.getContentPane().add(invitao);
+		
+		
+		//BOTON INICIAR SESION
+		JButton btnIniciarSesin = new JButton("Iniciar sesi\u00F3n");
+		btnIniciarSesin.setBounds(740, 181, 116, 35);
+		InterfazInicio.getContentPane().add(btnIniciarSesin);
+		btnIniciarSesin.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e){
+			
+			
+			String strUsuario = username.getText();
+			String strPassword = passwordField.getText();
+			/*
+			try {
+				
+				InterfazPerfil window = new InterfazPerfil();
+				window.setVisible(true);
+				InterfazInicio.setVisible(false);
+				} catch (Exception e1) {
+					e1.printStackTrace();
+			
+			}
+			
+
+			}
+			
+	});
+			
+		*/
+	
+			
+			/*
+			 ENCRIPTACION DE CONTRASEÑA
+				private String hash(String clear) throws Exception { 
+				MessageDigest md = MessageDigest.getInstance("MD5"); 
+				byte[] b = md.digest(clear.getBytes()); 
+				int size = b.length; 
+				StringBuffer h = new StringBuffer(size); 
+				for (int i = 0; i < size; i++) { 
+				int u = b [ i ] & 255 ;
+				
+				if (u<16){
+					h.append("0"+Integer.toHexString(u)); 
+				}else { 
+				h.append(Integer.toHexString(u)); 
+				} 
+				} 
+				return h.toString(); 
+				}
+				*/
+
+			
+			
+			/*HACER LA LLAMADA
+			 * if existeCliente..
+			 * /*Inicio window = new Inicio();
+			try {
+				Inicio window = new Inicio();
+				window.frmInicio.setVisible(true);
+			} catch (Exception e) {
+				e.printStackTrace(
+			 * 
+			 * else 
+			 * JOptionPane.showMessageDialog(null,"El cliente no existe");
+			 */		
+			//MaquinaGestora m1 = new MaquinaGestora();
+			
+			}	
+		});
+
+		
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(750, 138, 140, 18);
+		InterfazInicio.getContentPane().add(passwordField);
+		
+		username = new JTextField();
+		username.setBounds(750, 109, 140, 18);
+		InterfazInicio.getContentPane().add(username);
+		username.setColumns(10);
+		
+		JLabel lblUsuario = new JLabel("Usuario: ");
+		lblUsuario.setBounds(669, 113, 71, 14);
+		InterfazInicio.getContentPane().add(lblUsuario);
+		
+		JLabel lblNewLabel = new JLabel("Contrase\u00F1a:");
+		lblNewLabel.setBounds(669, 142, 89, 14);
+		InterfazInicio.getContentPane().add(lblNewLabel);
+		
+		btnInvitado.setBounds(259, 350, 103, 37);
+		InterfazInicio.getContentPane().add(btnInvitado);
+		btnInvitado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				/*PONER UN ENLACE A LA VENTANA DE USUARIO*/
+			}
+		});
+		
+		//BOTON REGISTRARSE 
+		JButton btnRegistrarse = new JButton("Registrarse");
+		btnRegistrarse.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				try {
+					
+					InterfazRegistro window = new InterfazRegistro(InterfazInicio);
+					window.setVisible(true);
+					InterfazInicio.setVisible(false);
+					} catch (Exception e1) {
+						e1.printStackTrace();
+				
+				}
+				
+
+				}
+				
+		});
+		btnRegistrarse.setBounds(630, 331, 116, 37);
+		InterfazInicio.getContentPane().add(btnRegistrarse);
+		
+
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(SystemColor.inactiveCaptionBorder);
+		panel.setBounds(634, 85, 280, 156);
+		InterfazInicio.getContentPane().add(panel);
+		
+		
+		
+		
+	
+		JLabel iniciase = new JLabel();
+		iniciase.setIcon(new ImageIcon(this.getClass().getResource("/imgs/imagenprincipal2.png")));
+		iniciase.setBounds(-13, 23, 650, 364);
+		InterfazInicio.getContentPane().add(iniciase);
+		
+		
+		
+	
+		
+		
+		//Fondo pantalla en un Jlabel o una imagen
+		JLabel lblFondo = new JLabel();
+		lblFondo.setIcon(new ImageIcon(this.getClass().getResource("/imgs/wallpaper.jpg")));
+		lblFondo.setBounds(0, 0, 924, 442);
+		InterfazInicio.getContentPane().add(lblFondo);
+		//Fin Fondo pantalla
+		
+
+		//modificar icono ventana
+		URL iconURL = getClass().getResource("/imgs/logotype.png");
+		// iconURL is null when not found
+		ImageIcon icon = new ImageIcon(iconURL);
+		InterfazInicio.setIconImage(icon.getImage());
+		
+	}
+		}
+

@@ -1,0 +1,12 @@
+package ejerciciosSMS;
+
+public class gestor {
+
+	public static void main(String args[]){
+		
+		MensajeSMS m1 = new MensajeSMS(5514151, 1451512, "Rafa");
+		
+		m1.enviarMensaje("Hola Rafa. ¿Como estas?");
+		m1.visualizarMensaje();
+	}
+}

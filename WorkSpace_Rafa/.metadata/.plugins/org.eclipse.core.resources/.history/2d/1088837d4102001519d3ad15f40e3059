@@ -1,0 +1,24 @@
+
+
+public class Medico{
+	
+	  	private String nombre;
+	    private String apellidos;
+	    private int edad;
+
+    public Medico(String nombre, String apellidos, int edad) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.edad = edad;
+    }
+
+    public void mostrardatos(){
+    	//Es lo mismo
+        System.out.println("Nombre: "+nombre);
+        System.out.println((new StringBuilder("Apellidos: ")).append(apellidos).toString());
+        System.out.println((new StringBuilder("Edad: ")).append(edad).toString());
+        
+    }
+
+  
+}

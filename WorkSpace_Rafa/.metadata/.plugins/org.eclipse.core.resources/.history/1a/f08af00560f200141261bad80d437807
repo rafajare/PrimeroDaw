@@ -1,0 +1,90 @@
+import java.util.*;
+
+
+public class Eventos {
+	
+	
+	
+	private int id;
+	private String nombre;
+	private String localCelebracion;
+	private String ciudad;
+	private String estado;
+	private Date hora;
+	private Date fecha;
+	private String tipo;
+	
+	
+	
+	
+	public Eventos(int id_, String nombre_, String localCelebracion_, String ciudad_, String estado_, Date hora_, Date fecha, String tipo_){
+		
+		id=id_;
+		nombre=nombre_;
+		localCelebracion=localCelebracion_;
+		ciudad=ciudad_;
+		estado=estado_;
+		hora=hora_;
+		fecha=fecha_;
+		tipo=tipo_;
+		
+		
+		
+	}
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getLocalCelebracion() {
+		return localCelebracion;
+	}
+	public void setLocalCelebracion(String localCelebracion) {
+		this.localCelebracion = localCelebracion;
+	}
+	public String getCiudad() {
+		return ciudad;
+	}
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	public Date getHora() {
+		return hora;
+	}
+	public void setHora(Date hora) {
+		this.hora = hora;
+	}
+	public Date getFecha() {
+		return fecha;
+	}
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	
+public void DarAlta(int id_,String nombre_,String localCelebracion_, String ciudad_,String estado_,Date hora_,Date fecha_,String tipo_){
+	
+	
+		
+}
+

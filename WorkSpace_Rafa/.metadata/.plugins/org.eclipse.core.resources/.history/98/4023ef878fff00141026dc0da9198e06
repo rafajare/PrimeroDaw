@@ -1,0 +1,168 @@
+package Funcionalidad;
+import java.util.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.swing.JOptionPane;
+
+public class MaquinaGestora2 {
+		
+
+	public MaquinaGestora2(){
+		System.out.println(Conexion.getInstance("localhost", "ventaentradas", "postgres", "tonphp").connect());
+	}
+	
+	public boolean existeCliente(String dni,String n_usuario){
+		String dni_="";
+		String n_usuario_="";
+		boolean conclusion=false;
+		
+		try{
+            Statement consulta= Conexion.getInstance("localhost", "ventaentradas", "postgres", "tonphp").getConection().createStatement();
+            String query = "SELECT * FROM usuario  WHERE  n_usuario = '"+n_usuario+"'  AND dni = '"+dni+"';";
+            ResultSet resultado= consulta.executeQuery(query);
+            
+            while(resultado.next()){
+            	dni_=resultado.getString("dni");
+            	n_usuario_=resultado.getString("n_usuario");
+            }            
+            
+         } catch(SQLException e){
+        	 e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"error");
+        } 
+		
+		if (dni_.equals(dni)  && n_usuario_.equals(n_usuario)){
+			conclusion=true;
+		}
+		
+		return conclusion;
+	}
+	
+	public void altaCliente(String dni_, String n_usuario_, String nombre_, String apellidos_, String email_, String contrasenya_, String telefono_, Integer puntos_) {
+		
+		 if(!this.existeCliente(dni_,n_usuario_)){
+			 try{
+
+				 Statement consulta= Conexion.getInstance("localhost", "ventaentradas", "postgres", "tonphp").getConection().createStatement();
+		         String query = "insert into usuario (dni, n_usuario, nombre, apellidos, email, contraseña, telefono, puntos) "
+		           		+ "values('"+dni_+"','"+n_usuario_+"','"+nombre_+"','"+apellidos_+"','"+email_+"','"+contrasenya_+"','"+telefono_+"','"+puntos_+"')";
+		         consulta.executeUpdate(query);    
+		            
+		         }catch(SQLException e){
+		        	 e.printStackTrace();
+		            JOptionPane.showMessageDialog(null,"error");
+	         }
+            	
+			 }else{
+				 JOptionPane.showMessageDialog(null,"Este cliente ya se encuentra registrado");
+			 }		
+	}
+	
+	public void bajaCliente(String dni_,String n_usuario_){
+		if(this.existeCliente(dni_,n_usuario_)){  
+		try{
+	            Statement consulta= Conexion.getInstance("localhost", "ventaentradas", "postgres", "tonphp").getConection().createStatement();
+	            consulta.executeUpdate("DELETE FROM usuario  WHERE  n_usuario = '"+n_usuario_+"'  AND dni = '"+dni_+"';");
+	         } catch(SQLException e){
+	        	 e.printStackTrace();
+	            JOptionPane.showMessageDialog(null,"error");
+	            }
+		
+		}else{
+			JOptionPane.showMessageDialog(null,"No se reconoce este usuario");
+		}
+	}
+	
+	public boolean existeEvento(String nombre_){
+		String nombre="";
+		boolean conclusion=false;
+		
+		try{
+            Statement consulta= Conexion.getInstance("localhost", "ventaentradas", "postgres", "tonphp").getConection().createStatement();
+            String query = "SELECT * FROM evento  WHERE  nombre = '"+nombre_+"';";
+            ResultSet resultado= consulta.executeQuery(query);
+            
+            while(resultado.next()){
+            	nombre=resultado.getString("nombre");
+            }            
+            
+         } catch(SQLException e){
+        	 e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"error");
+        } 
+		
+		if (nombre_.equals(nombre)){
+			conclusion=true;
+		}
+		
+		return conclusion;
+	}
+	
+	public void altaEvento(String nombre_, String estado_, String fechahora_, String sala_, String asiento_, String datos_, Integer nument_, Integer precio_, String NombreLugarEvento_, String tipo_, Integer Aforo_, String Direccion_, String poblacion_, Integer codigoPostal_, String Pais_){
+		Integer idLugar=0;
+		
+		if(!this.existeEvento(nombre_)){
+			 try{
+
+				 Statement consulta= Conexion.getInstance("localhost", "ventaentradas", "postgres", "tonphp").getConection().createStatement();
+		        
+		         
+		         if(idLugar==0){
+		            	
+		            	consulta.executeUpdate("insert into lugar_evento (nombre, tipo, aforo, direccion, poblacion, codigo_postal, pais) values('"+NombreLugarEvento_+"','"+tipo_+"','"+Aforo_+"','"+Direccion_+"','"+poblacion_+"','"+codigoPostal_+"','"+Pais_+"')");
+		            	
+		            	ResultSet _lugar = consulta.executeQuery("select id from lugar_evento where nombre ='"+NombreLugarEvento_+"' and codigo_postal= '"+codigoPostal_+"';");
+		  	            while(_lugar.next()){
+		  	            	
+		  	            	idLugar=_lugar.getInt("id");
+		  	            	
+		  	            	System.out.println(idLugar);	            	
+		  	            }
+		  	            
+		         }else{
+		        	 ResultSet Lugar = consulta.executeQuery("select id from lugar_evento where nombre ='"+NombreLugarEvento_+"' and codigo_postal= '"+codigoPostal_+"';");
+			            while(Lugar.next()){
+			            	
+			            	idLugar=Lugar.getInt("id");
+			            	
+			            	System.out.println(idLugar);
+			         }
+		         }
+		         
+		         String query = "INSERT INTO evento (nombre, estado, fecha_hora, sala, asiento, datos, num_entradas_disponibles, precio, id_lugar_evento) VALUES ('"+nombre_+"','"+estado_+"','"+fechahora_+"','"+sala_+"','"+asiento_+"','"+datos_+"',"+nument_+","+precio_+","+idLugar+");";
+		         consulta.executeUpdate(query);
+		            
+		         }catch(SQLException e){
+		        	 e.printStackTrace();
+		            JOptionPane.showMessageDialog(null,"error");
+	         }
+            	
+			 }else{
+				 JOptionPane.showMessageDialog(null,"Este evento ya se encuentra registrado");
+			 }		
+	}
+	
+	public void bajaEvento(String nombre_){
+		if(this.existeEvento(nombre_)){  
+			try{
+		            Statement consulta= Conexion.getInstance("localhost", "ventaentradas", "postgres", "tonphp").getConection().createStatement();
+		            consulta.executeUpdate("DELETE FROM evento  WHERE  nombre = '"+nombre_+"';");
+		         } catch(SQLException e){
+		        	 e.printStackTrace();
+		            JOptionPane.showMessageDialog(null,"error");
+		            }
+			
+			}else{
+				JOptionPane.showMessageDialog(null,"No se reconoce este evento");
+			}
+	}
+	
+}
+
+
+
+

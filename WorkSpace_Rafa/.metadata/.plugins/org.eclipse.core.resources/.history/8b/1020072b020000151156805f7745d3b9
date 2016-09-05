@@ -1,0 +1,22 @@
+package ejercicio2;
+
+public class AreaProtegidaAcuatica extends AreaProtegida{
+
+	private int numLagos;
+
+	public AreaProtegidaAcuatica(double km_, String nombre_, int numEspecies_,String ong_,double subvencion_,int numLagos_){
+		super(km_,nombre_,numEspecies_,ong_,subvencion_);
+		numLagos=numLagos_;
+	}
+	
+	public int getNumLagos() {
+		return numLagos;
+	}
+
+	public void setNumLagos(int numLagos) {
+		this.numLagos = numLagos;
+	}
+	
+	
+	
+}

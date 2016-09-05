@@ -1,0 +1,169 @@
+package GUI;
+
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.net.URL;
+import java.sql.ResultSet;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+
+import java.awt.Font;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
+public class InterfazPerfil {
+
+	private JFrame framePerfil;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					InterfazPerfil window = new InterfazPerfil();
+					window.framePerfil.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public InterfazPerfil() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		framePerfil = new JFrame();
+		framePerfil.setResizable(false);
+		framePerfil.setTitle("Event4All - Perfil cliente");
+		framePerfil.setBounds(100, 100, 930, 470);
+		framePerfil.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		framePerfil.getContentPane().setLayout(null);
+				//Fin modificar icono ventana
+				
+				
+				JButton cargaravatar = new JButton();
+				cargaravatar.setIcon(new ImageIcon(this.getClass().getResource("/imgs/cargafotoperfilfin.png")));
+				cargaravatar.setBounds(136, 139, 75, 57);
+				cargaravatar.setBorder(null);
+				cargaravatar.setOpaque(false);
+				cargaravatar.setContentAreaFilled(false);
+				cargaravatar.setBorderPainted(false);
+				framePerfil.getContentPane().add(cargaravatar);
+				//
+				cargaravatar.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg0) {
+
+							
+					}
+				});
+				
+				JScrollPane scrollPane = new JScrollPane();
+				scrollPane.setBounds(76, 244, 699, 167);
+				framePerfil.getContentPane().add(scrollPane);
+				
+				table = new JTable();
+				scrollPane.setViewportView(table);
+				
+				
+				
+				JLabel label = new JLabel("0");
+				label.setHorizontalAlignment(SwingConstants.CENTER);
+				label.setBounds(702, 89, 46, 14);
+				framePerfil.getContentPane().add(label);
+				
+				JLabel lblNewLabel_1 = new JLabel("Compras realizadas:");
+				lblNewLabel_1.setBounds(76, 225, 157, 14);
+				framePerfil.getContentPane().add(lblNewLabel_1);
+				
+				JLabel lblNewLabel = new JLabel("puntos");
+				lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 10));
+				lblNewLabel.setBounds(708, 104, 46, 14);
+				framePerfil.getContentPane().add(lblNewLabel);
+				
+				
+				JLabel imgpuntos = new JLabel();
+				imgpuntos.setIcon(new ImageIcon(this.getClass().getResource("/imgs/puntosimg2.png")));
+				imgpuntos.setBounds(640, 11, 182, 167);
+				framePerfil.getContentPane().add(imgpuntos);
+				
+				JLabel lblNombre = new JLabel("Nombre:");
+				lblNombre.setBounds(211, 73, 55, 14);
+				framePerfil.getContentPane().add(lblNombre);
+				
+				textField = new JTextField();
+				textField.setEditable(false);
+				textField.setBounds(270, 70, 146, 20);
+				textField.setHorizontalAlignment(SwingConstants.CENTER);
+				framePerfil.getContentPane().add(textField);
+				textField.setColumns(10);
+		
+		
+		//imagen
+				JLabel defaultava = new JLabel();
+				defaultava.setIcon(new ImageIcon(this.getClass().getResource("/imgs/defaultavatar.png")));
+				defaultava.setBounds(57, 46, 128, 128);
+				framePerfil.getContentPane().add(defaultava);
+				
+				textField_1 = new JTextField();
+				textField_1.setEditable(false);
+				textField_1.setHorizontalAlignment(SwingConstants.CENTER);
+				textField_1.setBounds(270, 98, 188, 20);
+				framePerfil.getContentPane().add(textField_1);
+				textField_1.setColumns(10);
+				
+				JLabel lblApellidos = new JLabel("Apellidos:");
+				lblApellidos.setBounds(211, 101, 55, 14);
+				framePerfil.getContentPane().add(lblApellidos);
+				
+				textField_2 = new JTextField();
+				textField_2.setEditable(false);
+				textField_2.setHorizontalAlignment(SwingConstants.CENTER);
+				textField_2.setBounds(270, 123, 222, 20);
+				framePerfil.getContentPane().add(textField_2);
+				textField_2.setColumns(10);
+				
+				JLabel lblEmail = new JLabel("E-mail:");
+				lblEmail.setBounds(211, 126, 46, 14);
+				framePerfil.getContentPane().add(lblEmail);
+				//Fin Fondo pantalla
+		
+		//Fondo pantalla en un Jlabel o una imagen
+				JLabel lblFondo = new JLabel();
+				lblFondo.setIcon(new ImageIcon(this.getClass().getResource("/imgs/wallpaper.jpg")));
+				lblFondo.setBounds(0, 0, 924, 442);
+				framePerfil.getContentPane().add(lblFondo);
+				//Fin Fondo pantalla
+				
+				//modificar icono ventana
+				URL iconURL = getClass().getResource("/imgs/logotype.png");
+				// iconURL is null when not found
+				ImageIcon icon = new ImageIcon(iconURL);
+				framePerfil.setIconImage(icon.getImage());
+				
+	}
+}
+
+
+

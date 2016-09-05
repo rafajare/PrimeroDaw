@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class Editorial {
+
+	HashMap<String, Publicacion> publicaciones_realizadas;
+
+	public Editorial() {
+		publicaciones_realizadas = new HashMap<String, Publicacion>();
+	}
+
+	public Editorial(HashMap<String, Publicacion> vpublicaciones_realizadas) {
+		publicaciones_realizadas = vpublicaciones_realizadas;
+	}
+
+	
+	
+	public void getPublicaciones(String visbn) {
+		System.out.println(publicaciones_realizadas.get(visbn));
+	}
+
+	public void addPublicaciones(Publicacion nuevaPublicacion) {
+		publicaciones_realizadas.put(nuevaPublicacion.getIsbn(),nuevaPublicacion);
+		System.out.println("Publicación añadida");
+	}
+
+	public void removePublicaciones(String visbn) {
+		publicaciones_realizadas.remove(visbn);
+		System.out.println("Publicación eliminada");
+	}
+
+	public String toString() {
+		String Cad_Editorial = " ";
+		Set<String> claves = publicaciones_realizadas.keySet();
+		for (Iterator<String> it = publicaciones_realizadas.keySet().iterator(); it.hasNext();) {
+			String clave_isbn = it.next();
+			Publicacion p = publicaciones_realizadas.get(clave_isbn);
+			Cad_Editorial = Cad_Editorial + p.toString() + "\n";
+		}
+
+		return Cad_Editorial+"\n";
+
+	}
+
+}

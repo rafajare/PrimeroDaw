@@ -1,0 +1,9 @@
+package Parque;
+
+
+public interface Visitable {
+
+	String visitar();
+	
+	
+}

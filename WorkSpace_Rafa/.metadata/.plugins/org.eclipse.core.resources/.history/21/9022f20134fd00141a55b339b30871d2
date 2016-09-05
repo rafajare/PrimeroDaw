@@ -1,0 +1,332 @@
+package Funcionalidad;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.*;
+
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+
+public class Evento {
+	
+
+	
+	private String nombre;
+	private String Direccion;
+	private String poblacion;
+	private String estado;
+	private Date fecha;
+	private String tipo;
+	private static int entradasTotales=100;
+	private int entradasDisponibles;
+	private int entradasReservadas;
+	private int numSerieEntrada [];
+	private int contador=entradasTotales-entradasDisponibles;
+	private int precio;
+	
+	private String Sala;
+	private String Asiento;
+	private String NumeroDeEntradas;
+	private String Datos;
+	private String Pais;
+	private String Aforo;
+	private String codigoPostal;
+	private String NombreLugarEvento;
+	
+	
+	
+	public Evento(){
+		
+	}
+	
+	public Evento(int id_, String nombre_, String Direccion_, String poblacion_, 
+			String estado_, Date fecha_, String tipo_,String Sala_,String Asiento_,String NumeroDeEntradas_,String 
+			Datos_,String Pais_,String Aforo_,String codigoPostal_, int precio_){
+		
+		
+		nombre=nombre_;
+		Direccion=Direccion_;
+		poblacion=poblacion_;
+		estado=estado_;
+		fecha=fecha_;
+		tipo=tipo_;
+		setSala(Sala_);
+		setAsiento(Asiento_);
+		setNumeroDeEntradas(NumeroDeEntradas_);
+		setDatos(Datos_);
+		setPais(Pais_);
+		setAforo(Aforo_);
+		setCodigoPostal(codigoPostal_);
+		NombreLugarEvento=NombreLugarEvento;
+		setPrecio(precio_);
+		
+		
+	}
+	
+	
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getDireccion() {
+		return Direccion;
+	}
+	public void setDireccion_(String localCelebracion) {
+		this.Direccion = localCelebracion;
+	}
+	public String setPoblacion() {
+		return poblacion;
+	}
+	public void setPoblacion(String ciudad) {
+		this.poblacion = ciudad;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	
+	public Date getFecha() {
+		return fecha;
+	}
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	
+	public void DarAlta(String nombre_,String Direccion_, String poblacion_,String estado_,Date fecha_,String tipo_,String Sala_,String Asiento_,String NumeroDeEntradas_,String 
+			Datos_,String Pais_,String Aforo_,String codigoPostal_,String NombreLugarEvento_,int precio_){
+		
+		
+		
+		
+		Statement consulta= Conexion.getInstance("localhost", "ventaentradas", "postgres", "").getConection().createStatement();
+        String query = "INSERT INTO evento (nombre, estado, fecha_hora, sala, asiento, datos, num_entradas_disponibles, precio) VALUES ('"+nombre_+"','"+estado_+"','"+fecha_+"','"+Sala_+"','"+Asiento_+"','"+Datos_+"',"+NumeroDeEntradas_+","+precio_+");";
+        consulta.executeUpdate(query);    
+        
+        try{
+            Class.forName(driver);
+            Connection connect=(Connection) DriverManager.getConnection(connectString,user,password);
+            Statement consulta1= connect.createStatement();
+            Integer idLugar=0;
+            ResultSet Lugar = consulta1.executeQuery("select id from lugar_evento where nombre ='"+NombreLugarEvento_+"' and codigo_postal= '"+codigoPostal_+"';");
+            while(Lugar.next()){
+            	System.out.println("Entro en while 1");
+            	idLugar=Lugar.getInt("id");
+            	
+            	System.out.println(idLugar);
+            	
+            }
+
+            if(idLugar==0){
+            	
+            	consulta1.executeUpdate("insert into lugar_evento (nombre, tipo, aforo, direccion, poblacion, codigo_postal, pais) values('"+NombreLugarEvento_+"','"+tipo_+"','"+Aforo_+"','"+Direccion_+"','"+poblacion_+"','"+codigoPostal_+"','"+Pais_+"')");
+            	
+            	ResultSet _lugar = consulta1.executeQuery("select id from lugar_evento where nombre ='"+NombreLugarEvento_+"' and codigo_postal= '"+codigoPostal_+"';");
+  	            while(_lugar.next()){
+  	            	System.out.println("Entro en while 2");
+  	            	idLugar=_lugar.getInt("id");
+  	            	
+  	            	System.out.println(idLugar);	            	
+  	            }
+            	
+	         }
+            
+           consulta1.executeUpdate("insert into evento (nombre, estado, fecha_hora, sala, asiento, datos, num_entradas_disponibles,precio) values('"+nombre_+"','"+estado_+"','"+fecha_+"','"+Sala_+"','"+Asiento_+"','"+Datos_+"','"+NumeroDeEntradas_+"','"+precio_+"')");
+        
+           
+        
+	     
+		/*
+		String driver = "org.postgresql.Driver";
+		String connectString = "jdbc:postgresql://localhost:5432/ventaentradas";
+		String user = "postgres";
+		String password = "tonphp";
+		
+         try{
+            Class.forName(driver);
+            Connection connect=(Connection) DriverManager.getConnection(connectString,user,password);
+            Statement consulta= connect.createStatement();
+            Integer idLugar=0;
+            ResultSet Lugar = consulta.executeQuery("select id from lugar_evento where nombre ='"+NombreLugarEvento_+"' and codigo_postal= '"+codigoPostal_+"';");
+            while(Lugar.next()){
+            	System.out.println("Entro en while 1");
+            	idLugar=Lugar.getInt("id");
+            	
+            	System.out.println(idLugar);
+            	
+            }
+
+            if(idLugar==0){
+            	
+            	consulta.executeUpdate("insert into lugar_evento (nombre, tipo, aforo, direccion, poblacion, codigo_postal, pais) values('"+NombreLugarEvento_+"','"+tipo_+"','"+Aforo_+"','"+Direccion_+"','"+poblacion_+"','"+codigoPostal_+"','"+Pais_+"')");
+            	
+            	ResultSet _lugar = consulta.executeQuery("select id from lugar_evento where nombre ='"+NombreLugarEvento_+"' and codigo_postal= '"+codigoPostal_+"';");
+  	            while(_lugar.next()){
+  	            	System.out.println("Entro en while 2");
+  	            	idLugar=_lugar.getInt("id");
+  	            	
+  	            	System.out.println(idLugar);	            	
+  	            }
+            	
+	         }
+            
+           consulta.executeUpdate("insert into evento (nombre, estado, fecha_hora, sala, asiento, datos, num_entradas_disponibles,precio) values('"+nombre_+"','"+estado_+"','"+fecha_+"','"+Sala_+"','"+Asiento_+"','"+Datos_+"','"+NumeroDeEntradas_+"','"+precio_+"')");
+
+            
+            
+         
+         } catch(Exception e){
+        	 System.out.println(e.toString());
+         }
+
+      */
+		
+		
+	}
+			
+		
+
+
+	public void DarBaja(String nombre_,String lugar_evento){
+	
+		 try{
+
+			 Statement consulta= Conexion.getInstance("localhost", "ventaentradas", "postgres", "tonphp").getConection().createStatement();
+			 consulta.executeUpdate("delete from evento where nombre='"+nombre_+"'");
+	          
+		 	}catch(SQLException e){
+	        	 e.printStackTrace();
+	            JOptionPane.showMessageDialog(null,"error");
+         }
+			/*
+			 * String driver = "org.postgresql.Driver";
+			String connectString = "jdbc:postgresql://localhost:5432/ventaentradas";
+			String user = "postgres";
+			String password = "tonphp";
+			
+	         try{
+	            Class.forName(driver);
+	            Connection connect=(Connection) DriverManager.getConnection(connectString,user,password);
+	            Statement consulta=(Statement) connect.createStatement();
+	            consulta.executeUpdate("delete from evento where nombre='"+nombre_+"'");
+	           
+
+	         } catch(Exception e){
+	        	 System.out.println(e.toString());
+	         }
+
+	      
+	}
+	*/
+		 
+		 }//FIN VOID	
+
+		
+
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+
+	public int getEntradasReservadas() {
+		return entradasReservadas;
+	}
+
+	public void setEntradasReservadas(int entradasReservadas) {
+		this.entradasReservadas = entradasReservadas;
+	}
+
+	public int[] getNumSerieEntrada() {
+		return numSerieEntrada;
+	}
+
+	public void setNumSerieEntrada(int numSerieEntrada[]) {
+		this.numSerieEntrada = numSerieEntrada;
+	}
+
+	public int getContador() {
+		return contador;
+	}
+
+	public void setContador(int contador) {
+		this.contador = contador;
+	}
+
+	public String getSala() {
+		return Sala;
+	}
+
+	public void setSala(String sala) {
+		Sala = sala;
+	}
+
+	public String getAsiento() {
+		return Asiento;
+	}
+
+	public void setAsiento(String asiento) {
+		Asiento = asiento;
+	}
+
+	public String getNumeroDeEntradas() {
+		return NumeroDeEntradas;
+	}
+
+	public void setNumeroDeEntradas(String numeroDeEntradas) {
+		NumeroDeEntradas = numeroDeEntradas;
+	}
+
+	public String getDatos() {
+		return Datos;
+	}
+
+	public void setDatos(String datos) {
+		Datos = datos;
+	}
+
+	public String getPais() {
+		return Pais;
+	}
+
+	public void setPais(String pais) {
+		Pais = pais;
+	}
+
+	public String getAforo() {
+		return Aforo;
+	}
+
+	public void setAforo(String aforo) {
+		Aforo = aforo;
+	}
+
+	public String getCodigoPostal() {
+		return codigoPostal;
+	}
+
+	public void setCodigoPostal(String codigoPostal) {
+		this.codigoPostal = codigoPostal;
+	}
+
+}//FIN CLASE
+
+
+

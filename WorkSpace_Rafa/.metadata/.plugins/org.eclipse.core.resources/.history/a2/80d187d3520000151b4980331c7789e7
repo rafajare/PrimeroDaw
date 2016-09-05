@@ -1,0 +1,82 @@
+package GUI;
+
+import java.awt.EventQueue;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
+public class VentanaLoginGestor {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					VentanaLoginGestor window = new VentanaLoginGestor();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public VentanaLoginGestor() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 400, 250);
+		frame.setResizable(false);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		frame.setTitle("Gestor");
+		
+		JButton btnNewButton = new JButton("LOGIN");
+		btnNewButton.setBounds(168, 173, 89, 23);
+		frame.getContentPane().add(btnNewButton);
+		
+		
+		textField = new JTextField();
+		textField.setBounds(141, 11, 136, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(141, 91, 136, 20);
+		frame.getContentPane().add(textField_1);
+		
+		JLabel lblUsuario = new JLabel("Usuario");
+		lblUsuario.setBounds(25, 14, 68, 14);
+		frame.getContentPane().add(lblUsuario);
+		
+		JLabel lblContrasea = new JLabel("Contrase\u00F1a");
+		lblContrasea.setBounds(25, 94, 76, 14);
+		frame.getContentPane().add(lblContrasea);
+		
+		//Fondo pantalla en un Jlabel o una imagen
+		JLabel lblFondo = new JLabel();
+		lblFondo.setIcon(new ImageIcon(this.getClass().getResource("/imgs/wallpaper.jpg")));
+		lblFondo.setBounds(0, 0, 924, 442);
+		frame.getContentPane().add(lblFondo);
+		//Fin Fondo pantalla
+		
+	}
+}
