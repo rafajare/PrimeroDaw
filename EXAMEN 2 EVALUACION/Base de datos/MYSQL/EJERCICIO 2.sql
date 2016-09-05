@@ -1,0 +1,1 @@
+select NUM_EMP, APELLIDO, SALARIO from emp where salario >="200000";

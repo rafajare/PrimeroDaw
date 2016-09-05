@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<texto>
+
+	<titulo>XML explicado a los niños</titulo>
+	<párrafo>El enguajes de marcas.</párrafo> <abreviatura>XML</abreviatura>define cómo crear 
+
+	<párrafo>Las marcas se añaden a un documento de texto 
+			 para añadir información.</párrafo>
+
+<http>www.example.org</http>
+
+</texto>
+

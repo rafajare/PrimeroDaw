@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE FILM
+[
+<!ELEMENT FILM (TITLE, (STAR | NARRATOR | INSTRUCTOR))>
+<!ATTLIST FILM Class CDATA "fictional" Year CDATA #REQUIRED>
+<!ELEMENT TITLE (#PCDATA)>
+<!ELEMENT STAR (#PCDATA)>
+<!ELEMENT NARRATOR (#PCDATA)>
+<!ELEMENT INSTRUCTOR (#PCDATA)>
+]>
+
+<FILM Class = "Terror" Year ="2014">
+	<TITLE>  </TITLE>
+	<STAR>   </STAR>
+</FILM>	

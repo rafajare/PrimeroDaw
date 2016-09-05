@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ font:Georgia, , Times, serif; size:10px; }
+
+p#azul{ color:#3399FF;}
+
+div p { color:#000000;}
+
+a { color:#FF6633;
+	underline; }
+	
+em  { background-color:#FFFF99; 
+	 border:1px;
+	 border:solid;
+	 border-color:#FFFF33}
+	  
+em.subNaranja{ background-color:#F96; 
+				border:1px;				
+				border:solid;
+				border-color:#F60;
+}
+
+span {font-weight:bold;}
+	

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.prueba.es/catalogo_libros" >
+  <!--> TIPOS <-->
+  
+    <xs:simpleType name="tipoMes">
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="1"/>
+        <xs:maxInclusive value="2"/>
+      </xs:restriction>
+    </xs:simpleType>
+  
+  
+    <xs:simpleType name="tipoAnyo">
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="1900"/>
+        <xs:maxInclusive value="2011"/>
+      </xs:restriction>
+    </xs:simpleType>
+  
+  
+    <xs:simpleType name="tipoISBN">
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="13"/>
+        <xs:maxInclusive value="17"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+  
+  <!--> ELEMENTOS <-->
+  
+  <xs:element name="catalogoLibro">
+    <xs:complexType>
+      <xs:attribute name="categoria">
+	  <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration name="autobografia"/>
+          <xs:enumeration name="noficcion"/>
+          <xs:enumeration name="ficcion"/>
+        </xs:restriction>
+		</xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="enstock" type="xs:string" use="requerided">
+	  <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration name="false"/>
+          <xs:enumeration name="true"/>
+        </xs:restriction>
+		</xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="revisor" type="xs:string"/>
+      <xs:sequence>
+        <xs:element name="libro" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="titulo" type="xs:string"/>
+              <xs:element name="autor" type="xs:string" maxOccurs="unbounded"/>
+              <xs:element name="fecha">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="mes" type="tipoMes" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="anyo" type="tipoAnyo"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ISBN" type="tipoISBN"/>
+              <xs:element name="editor" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

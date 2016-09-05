@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE asesoria
+[
+
+<!ELEMENT asesoria (carta)*>
+<!ELEMENT carta (destinatario, direccion, fecha_envio*, asunto?, cuerpo)>
+<!ELEMENT destinatario (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT fecha_envio (#PCDATA)>
+<!ELEMENT asunto (#PCDATA)>
+<!ELEMENT cuerpo (#PCDATA)>
+<!ATTLIST direccion formato CDATA "C/ PATIO/ PUERTA">
+<!ATTLIST fecha_envio tipo CDATA "DIA/ MES/ AÑO">
+
+]>
+
+ <asesoria>
+ 	
+	<carta>
+		<destinatario> </destinatario>
+		<direccion formato ="C/ PATIO/ PUERTA"> </direccion>
+		<fecha_envio tipo ="DIA/ MES/ AÑO"> </fecha_envio>
+		<asunto> </asunto>
+		<cuerpo> </cuerpo>
+	</carta>	
+ 	
+ </asesoria>

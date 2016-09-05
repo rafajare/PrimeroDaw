@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<libro_contable>
+	<factura coidopostal="XXXXXXX">
+	<numero factura="xxxx"> </numero>
+	<id cliente ="xxxx"> </id>	
+	<tipo moneda ="€"> </tipo>
+			<empresa> 
+				<nombre> </nombre> dirección, población, provincia, cif y teléfono optativo). 
+				<direccion> </direccion>
+				<poblacion> </poblacion>
+				<provincia> </provincia>
+				<cif> </cif>
+				<telefono> </telefono>
+				<operativo> </operativo>
+			</empresa>
+		    
+			<cliente>
+			<nombre> </nombre>
+			<direccion> </direccion>
+			<provincia> </provincia>
+			</cliente> 
+			
+			<fecha> </fecha>
+					<lineas_pedido> 
+					<referencia> </referencia>
+					<descripcion></descripcion>
+					<cantidad> </cantidad>
+					<precio> </precio>
+					<importe> </importe>
+					</lineas_pedido>
+			<base_total> 1000</base_total>
+			<IVA porcentaje="21%">210 </IVA>
+			<cuota_total> 1210</cuota_total>	
+	</factura>			
+
+
+
+</libro_contable>

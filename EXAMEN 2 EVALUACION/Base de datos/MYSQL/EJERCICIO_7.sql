@@ -1,0 +1,1 @@
+SELECT APELLIDO as"EMPLEADO" from emp where APELLIDO NOT like"%__R";

@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+descripcion {display: block;
+             font:bold 16px "Trebuchet MS"; }
+
+nombre{
+	color:blue;
+	            }
+precio { color:#090;}				
+	
+	calorias {display: block;
+	          margin-bottom:25pt;
+	          color:red;}
+			  
+			  
+	

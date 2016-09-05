@@ -1,0 +1,1 @@
+SELECT NUM_EMP as "codigo", APELLIDO as "Empleado", FECHA_ALTA as"Fecha_Contrato" FROM emp where  FECHA_ALTA>="1982-01-01";

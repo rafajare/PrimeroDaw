@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <!-- tipos-->
+  
+  <xs:simpleType name="tipoSexo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="H"/>
+      <xs:enumeration value="M"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="tipoDni">
+    <xs:restriction base="xs:string">
+      <xs:length value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- elementos-->
+  <xs:element name="revista">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="nombre" type ="xs:string"/>
+        <xs:element name="codigo">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="fechaSalida" type="date"/>
+        <xs:element name="articulos" maxOccurs ="unbouned">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="autor">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombreAutor" type="xs:string"/>
+                    <xs:element name ="dni" type="tipoDni"/>
+                    <xs:element name="edad" type="integer">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:minInclusive value="18"/>
+                          <xs:maxInclusive value="99"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="sexo" type="tipoSexo"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="numPalabras" type="integer"/>
+              <xs:element name="texto" type ="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

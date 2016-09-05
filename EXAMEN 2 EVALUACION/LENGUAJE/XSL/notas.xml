@@ -1,0 +1,25 @@
+<?xml-stylesheet version="1.0" type="text/xsl" href="fors-if.xsl"?>
+<clase>
+  <profesor>
+    <nombre>Juanmi</nombre>
+    <apellido>Alberola</apellido>
+  </profesor>
+  <alumnos>
+    <alumno nota="5">
+      <nombre>Esteban</nombre>
+      <apellido>Tolosa</apellido>	  
+    </alumno>
+	<alumno nota="4">
+      <nombre>Javi</nombre>
+      <apellido>Urenya</apellido>
+    </alumno>
+	<alumno nota="6">
+      <nombre>David</nombre>
+      <apellido>Flores</apellido>
+    </alumno>
+	<alumno nota="4">
+      <nombre>Jose</nombre>
+      <apellido>Palla</apellido>
+    </alumno>	
+  </alumnos>
+</clase>

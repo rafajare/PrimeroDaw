@@ -1,0 +1,4 @@
+grep
+tail
+cat
+awk

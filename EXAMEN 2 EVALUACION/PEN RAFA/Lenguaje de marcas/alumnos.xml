@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alumno dni="111" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="alumno.xsd">
+  <nombre>Antonio Pérez</nombre>
+  <direccion>
+    <calle>Calle Fuente</calle>
+    <numero>4</numero>
+    <ciudad>Jabugo</ciudad>
+    <provincia CP="46460">Huelva</provincia>
+  </direccion>
+  <telefono>959222324</telefono>
+</alumno>

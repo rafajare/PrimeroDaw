@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+<form action="maneja_formulario.php">
+<fieldset> 
+<legend>Datos básicos</legend> <br />
+
+Nombre<br />
+<input type="text" maxtlength"30" size="50" /><br /><br />
+   Descripción<br />
+   
+	<label for="descripcion"></label> 
+	<textarea id="descripcion" name="descripcion" cols="40" rows=	
+    "5"></textarea> <br /><br />
+    
+    Foto <input type="file" name="adjunto" /><br /><br />
+    
+    <input name="contador" type="checkbox" value="contador" 
+    /> Añadir contador de visitas<br />
+
+</fieldset>
+
+<fieldset>
+	<legend> Datos económicos</legend><br />
+    
+    Precio <input type="text" size="10"/> 
+    €   &nbsp;&nbsp;&nbsp;&nbsp;
+    Impuestos 
+    <select id="impuestos" name="impuestos"> 
+   	<option value="" selected="4%">4%</option> 
+    <option value="7%"> 7% </option>
+    <option value="16% ">16% </option>
+    <option value=25%> 25% </option>
+    </select><br /> <br />
+    
+    Promoción <br />
+    <input type="radio" name="promocion" value="Ninguno" checked=
+    "checked" /> Ninguno <br />
+	<input type="radio" name="promocion" value="Transporte"/> 	
+    Transporte gratuito
+    <br />
+    <input type="radio"name="promocion" value="descuento" /> 
+    Descuento 5%
+ 
+    
+</fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1{ color:#FF9966}
+
+strong{ color:blue}
+
+span.green { color:#66FF66}
+
+span.amarillo { color:#CF3}
+
+caption{ color:red }
+
+
+
+
+
+
+table, tr, th, td
+
+{ 
+color:yellow;
+border:solid;
+border-width:thin;
+border-collapse:collapse;
+border-color:#000000;
+margin-align: right; 
+ 
+
+} 
+	
+	
+	
+	
+	
+	
+h2#titRojo{ color:red;}
+
+a{ color:#36F;
+	underline;} 
+
+em#rojo {color:red;}	
+
+span#naranja{ color:#C63}
+	
+div p{ color:#963}	
+
+div span{ color:#69F}
+
+div a{ color:#963; underline}
+
+
+img {width: 100px; height: 150px;}

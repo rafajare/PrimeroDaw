@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<deportistas>
+
+<deportista>
+	<deporte_Atletismo>
+	<nombre>JesseOwens</nombre>
+	</deporte_Atletismo>
+</deportista>
+
+<deportista>
+	<deporte_Natacion>
+	<nombre>Mark Spitz</nombre>
+	</deporte_Natacion>
+</deportista>
+
+</deportistas> 
+

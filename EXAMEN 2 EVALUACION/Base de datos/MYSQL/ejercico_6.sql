@@ -1,0 +1,1 @@
+SELECT APELLIDO FROM emp where APELLIDO like"%S%"

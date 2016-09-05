@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 { color:#3399CC}
+
+strong{ color:red }
+
+span{ color: #FC0 }
+
+h2 { color: #36F} 
+
+a{ color:red;
+   underline}
+
+a em{ color:#0CF}   
+
+
+span#morOscuro{ color:#990099}
+
+caption{ color:#0033FF} 
+ 
+table, tr, th, td{ border:solid;
+border-width:thin;
+border-collapse:collapse;
+
+} 

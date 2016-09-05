@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<jardin>
+	<arbol>
+			<nombre_cientifico  comun="Arce de Montpellier, Arce menor"> Acer monspessulanum </nombre_cientifico>   
+			<vegetacion>Caducifolio</vegetacion>
+			<altura>De 6 a 10 metros</altura>
+			<forma>Copa esférica. Tronco principal recto con bifurcaciones</forma>
+			<estructura>Ramaje colgante</estructura>
+			<color_primavera> Haz verde brillante, envés verde blanquecino</color_primavera>
+			<resistencias>Resistencia a las heladas  fuertes (hasta -15ºC)</resistencias>
+	</arbol>
+
+	<arbol>
+			<nombre_cientifico  comun="Olivo"> Olea europea </nombre_cientifico>
+			<vegetacion> Perenne</vegetacion>
+			<altura>De 8 a 15 metros</altura>
+			<forma>Copa irregular. Tronco principal irregular con bifurcaciones</forma>
+			<estructura> Ramaje tortuoso </estructura>
+			<color_primavera>Haz verde oscuro, envés verde plateado</color_primavera>
+			<resistencias>	Resistencia a las heladas medias (hasta -10ºC)</resistencias>
+	</arbol>
+	
+	<arbol>
+			<nombre_cientifico comun="Platano">Platanus orientalis </nombre_cientifico>
+			<vegetacion>Caducifolio</vegetacion>
+			<altura>De 20 a 25 metros</altura>
+			<formaestructura>
+				<copa>ovoidal</copa>
+				<forma>Tronco principal recto</forma>
+				<estructura>Ramaje expandido</estructura>
+			</formaestructura>
+			<color_primavera>Haz verde medio, enves verde claro</color_primavera>
+			<color_otoño>Ocre</color_otoño>
+			<resistencias>	Resistencia a las heladas fuertes (hasta -20ºC)</resistencias>
+	</arbol>
+	
+	<arbol>
+			<nombre_cientifico comun="Encina">Quercus ilex </nombre_cientifico>
+			<vegetacion>Quercus ilex </vegetacion>
+			<altura>En torno a 25 metros</altura>
+			<forma>Copa esférica o elíptica irregular. Tronco principal recto</forma>
+			<estructura>Ramaje tortuoso</estructura>
+			<color_primavera>: Plateado en hojas jóvenes. En hojas antiguas, haz verde oscuro, envés plateado</color_primavera>
+			<resistencias>Resistencia a las heladas fuertes (hasta -15ºC)</resistencias>
+
+	</arbol>
+	
+ </jardin>
